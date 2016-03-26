@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="jackson-databind-2.3.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/jackson-annotations-master.zip!/jackson-annotations-master/src/main/java" />
+      <root url="jar://$USER_HOME$/Downloads/jackson-annotations-master.zip!/jackson-annotations-master/src/test/java" />
+      <root url="jar://$USER_HOME$/Downloads/jackson-core-master.zip!/jackson-core-master/src/main/java" />
+      <root url="jar://$USER_HOME$/Downloads/jackson-core-master.zip!/jackson-core-master/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
