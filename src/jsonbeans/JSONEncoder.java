@@ -1,9 +1,8 @@
 package jsonbeans;
 
 import beans.*;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
-import com.google.gson.JsonSerializer;
 
 import javax.swing.event.ChangeEvent;
 import java.beans.*;
@@ -125,70 +124,5 @@ public class JSONEncoder {
 
     public String JSONasString(){
         return jsonWriter.toString();
-    }
-
-
-    public static void main(String[] args) {
-
-        Dolphin dolphin1 = new StripedDolphin();
-        Dolphin dolphin2 = new DottetDolphin();
-        Dolphin dolphin3 = new Dolphin();
-
-        Trainer trainer1 = new Trainer();
-        Trainer trainer2 = new Trainer();
-
-        Dolphinarium dolphinarium = new Dolphinarium();
-
-        dolphin1.setName("Amicus");
-        dolphin2.setName("Fidget");
-        dolphin3.setName("Flipper");
-
-        dolphin1.setDolphinarium(dolphinarium);
-        dolphin2.setDolphinarium(dolphinarium);
-        dolphin3.setDolphinarium(dolphinarium);
-
-        trainer1.setDolphins(new Dolphin[]{dolphin1, dolphin2, dolphin3});
-        trainer2.setDolphins(new Dolphin[]{dolphin1, dolphin2});
-
-        trainer1.setName("John");
-        trainer2.setName("Sarah");
-
-        dolphinarium.setFirstTrainer(trainer1);
-        dolphinarium.setSecondTrainer(trainer2);
-
-        JSONEncoder jsonEncoder = new JSONEncoder();
-
-
-        try{
-
-            /*My serializer*/
-            jsonEncoder.saveJSON(dolphinarium);
-//            System.out.println(jsonEncoder.jsonWriter);
-
-            /*Google JSON Lib*/
-//            Gson gson = new Gson();
-//
-//            String str = gson.toJson(dolphinarium);
-//
-//            System.out.println(str);
-
-
-            /*java.Beans XMLEncoder*/
-//            OutputStream outputStream = new FileOutputStream("out.xml");
-//            XMLEncoder xmlEncoder = new XMLEncoder(outputStream);
-//
-//            xmlEncoder.writeObject(dolphinarium);
-//            xmlEncoder.close();
-
-
-            /*Jackson*/
-
-        }
-        catch (JSONSerializationException e){
-            e.printStackTrace();
-        }
-//        catch (FileNotFoundException e){
-//            e.printStackTrace();
-//        }
     }
 }
