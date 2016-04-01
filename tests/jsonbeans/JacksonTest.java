@@ -5,12 +5,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 
-import java.beans.XMLEncoder;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
+public class JacksonTest {
 
-public class JSONEncoderTest {
 
     /*Test fields*/
     Dolphin dolphin1 = new StripedDolphin();
@@ -43,24 +39,18 @@ public class JSONEncoderTest {
         dolphinarium.setSecondTrainer(trainer2);
     }
 
-
     @Test
-    void jsonEncoderTest(){
+    void jacksonTest(){
 
-
-        JSONEncoder jsonEncoder = new JSONEncoder();
-
+        /*Jackson*/
 
         try{
-
-            /*My serializer*/
-            jsonEncoder.saveJSON(dolphinarium);
-            System.out.println(jsonEncoder.JSONasString());
-
+            ObjectMapper objectMapper = new ObjectMapper();
+            String jacksonString = objectMapper.writeValueAsString(dolphinarium);
+            System.out.println(jacksonString);
         }
-        catch (JSONSerializationException e){
+        catch(JsonProcessingException e){
             e.printStackTrace();
         }
-
     }
 }

@@ -1,16 +1,9 @@
 package jsonbeans;
 
 import beans.*;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 
-import java.beans.XMLEncoder;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-
-public class JSONEncoderTest {
+public class GSONTest {
 
     /*Test fields*/
     Dolphin dolphin1 = new StripedDolphin();
@@ -44,23 +37,15 @@ public class JSONEncoderTest {
     }
 
 
+
     @Test
-    void jsonEncoderTest(){
-
-
-        JSONEncoder jsonEncoder = new JSONEncoder();
-
-
-        try{
-
-            /*My serializer*/
-            jsonEncoder.saveJSON(dolphinarium);
-            System.out.println(jsonEncoder.JSONasString());
-
-        }
-        catch (JSONSerializationException e){
-            e.printStackTrace();
-        }
-
+    void gsonTest(){
+//        /*Google JSON Lib*/
+//            Gson gson = new Gson();
+//
+//            String str = gson.toJson(dolphinarium);
+//
+//            System.out.println(str);
     }
+
 }

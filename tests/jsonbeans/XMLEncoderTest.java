@@ -1,8 +1,6 @@
 package jsonbeans;
 
 import beans.*;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 
 import java.beans.XMLEncoder;
@@ -10,7 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 
-public class JSONEncoderTest {
+public class XMLEncoderTest {
 
     /*Test fields*/
     Dolphin dolphin1 = new StripedDolphin();
@@ -45,20 +43,16 @@ public class JSONEncoderTest {
 
 
     @Test
-    void jsonEncoderTest(){
+    void xmlEncoderTest() {
+        /*java.Beans XMLEncoder*/
 
+        try {
+            OutputStream outputStream = new FileOutputStream("out.xml");
+            XMLEncoder xmlEncoder = new XMLEncoder(outputStream);
 
-        JSONEncoder jsonEncoder = new JSONEncoder();
-
-
-        try{
-
-            /*My serializer*/
-            jsonEncoder.saveJSON(dolphinarium);
-            System.out.println(jsonEncoder.JSONasString());
-
-        }
-        catch (JSONSerializationException e){
+            xmlEncoder.writeObject(dolphinarium);
+            xmlEncoder.close();
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
