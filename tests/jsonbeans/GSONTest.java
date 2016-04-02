@@ -1,6 +1,8 @@
 package jsonbeans;
 
 import beans.*;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.junit.Test;
 
 public class GSONTest {
@@ -15,7 +17,6 @@ public class GSONTest {
 
     Dolphinarium dolphinarium = new Dolphinarium();
 
-    @Test
     void buildObjectGraph(){
 
         dolphin1.setName("Amicus");
@@ -39,13 +40,20 @@ public class GSONTest {
 
 
     @Test
-    void gsonTest(){
-//        /*Google JSON Lib*/
-//            Gson gson = new Gson();
-//
-//            String str = gson.toJson(dolphinarium);
-//
-//            System.out.println(str);
+    public void gsonTest() {
+
+        buildObjectGraph();
+
+        /*Google JSON Lib*/
+
+        GsonBuilder gb = new GsonBuilder();
+
+        gb.setPrettyPrinting();
+        Gson gson = gb.create();
+
+        String str = gson.toJson(dolphinarium);
+
+        System.out.println(str);
     }
 
 }

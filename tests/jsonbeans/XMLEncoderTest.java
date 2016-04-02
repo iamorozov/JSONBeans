@@ -20,7 +20,6 @@ public class XMLEncoderTest {
 
     Dolphinarium dolphinarium = new Dolphinarium();
 
-    @Test
     void buildObjectGraph(){
 
         dolphin1.setName("Amicus");
@@ -43,8 +42,10 @@ public class XMLEncoderTest {
 
 
     @Test
-    void xmlEncoderTest() {
+    public void xmlEncoderTest() {
         /*java.Beans XMLEncoder*/
+
+        buildObjectGraph();
 
         try {
             OutputStream outputStream = new FileOutputStream("out.xml");

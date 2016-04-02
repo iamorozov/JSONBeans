@@ -18,7 +18,6 @@ public class JacksonTest {
 
     Dolphinarium dolphinarium = new Dolphinarium();
 
-    @Test
     void buildObjectGraph(){
 
         dolphin1.setName("Amicus");
@@ -40,7 +39,9 @@ public class JacksonTest {
     }
 
     @Test
-    void jacksonTest(){
+    public void jacksonTest(){
+
+        buildObjectGraph();
 
         /*Jackson*/
 

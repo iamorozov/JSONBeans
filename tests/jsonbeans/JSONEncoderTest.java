@@ -1,14 +1,9 @@
 package jsonbeans;
 
 import beans.*;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Assert;
 import org.junit.Test;
-
-import java.beans.XMLEncoder;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
+import org.junit.Assert.*;
 
 public class JSONEncoderTest {
 
@@ -22,16 +17,15 @@ public class JSONEncoderTest {
 
     Dolphinarium dolphinarium = new Dolphinarium();
 
-    @Test
     void buildObjectGraph(){
 
         dolphin1.setName("Amicus");
         dolphin2.setName("Fidget");
         dolphin3.setName("Flipper");
 
-        dolphin1.setDolphinarium(null);
-        dolphin2.setDolphinarium(null);
-        dolphin3.setDolphinarium(null);
+        dolphin1.setDolphinarium(dolphinarium);
+        dolphin2.setDolphinarium(dolphinarium);
+        dolphin3.setDolphinarium(dolphinarium);
 
         trainer1.setDolphins(new Dolphin[]{dolphin1, dolphin2, dolphin3});
         trainer2.setDolphins(new Dolphin[]{dolphin1, dolphin2});
@@ -45,11 +39,12 @@ public class JSONEncoderTest {
 
 
     @Test
-    void jsonEncoderTest(){
+    public void jsonEncoderTest(){
 
-
+        buildObjectGraph();
         JSONEncoder jsonEncoder = new JSONEncoder();
 
+        Assert.assertNotNull(dolphinarium);
 
         try{
 
