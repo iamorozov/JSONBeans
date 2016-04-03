@@ -71,7 +71,6 @@ public class JSONEncoder {
                 }
 
                 jsonWriter.writeCloseBrace();
-
                 serialized.remove(src);
             }
         }
