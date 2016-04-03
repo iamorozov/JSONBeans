@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_45" class="java.beans.XMLDecoder">
- <object class="beans.Dolphinarium">
+ <object class="beans.Dolphinarium" id="Dolphinarium0">
   <void property="firstTrainer">
    <object class="beans.Trainer">
     <void property="dolphins">
      <array class="beans.Dolphin" length="3">
       <void index="0">
        <object class="beans.StripedDolphin" id="StripedDolphin0">
+        <void property="dolphinarium">
+         <object idref="Dolphinarium0"/>
+        </void>
         <void property="name">
          <string>Amicus</string>
         </void>
@@ -17,6 +20,9 @@
       </void>
       <void index="1">
        <object class="beans.DottetDolphin" id="DottetDolphin0">
+        <void property="dolphinarium">
+         <object idref="Dolphinarium0"/>
+        </void>
         <void property="name">
          <string>Fidget</string>
         </void>
@@ -27,6 +33,9 @@
       </void>
       <void index="2">
        <object class="beans.Dolphin">
+        <void property="dolphinarium">
+         <object idref="Dolphinarium0"/>
+        </void>
         <void property="name">
          <string>Flipper</string>
         </void>

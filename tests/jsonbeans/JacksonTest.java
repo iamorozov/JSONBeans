@@ -47,10 +47,13 @@ public class JacksonTest {
 
         try{
             ObjectMapper objectMapper = new ObjectMapper();
-            String jacksonString = objectMapper.writeValueAsString(dolphinarium);
+            String jacksonString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(dolphinarium);
             System.out.println(jacksonString);
+
+
+            Dolphinarium des = objectMapper.readValue(jacksonString, Dolphinarium.class);
         }
-        catch(JsonProcessingException e){
+        catch(Exception e){
             e.printStackTrace();
         }
     }

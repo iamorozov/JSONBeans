@@ -26,9 +26,9 @@ public class XMLEncoderTest {
         dolphin2.setName("Fidget");
         dolphin3.setName("Flipper");
 
-        dolphin1.setDolphinarium(null);
-        dolphin2.setDolphinarium(null);
-        dolphin3.setDolphinarium(null);
+        dolphin1.setDolphinarium(dolphinarium);
+        dolphin2.setDolphinarium(dolphinarium);
+        dolphin3.setDolphinarium(dolphinarium);
 
         trainer1.setDolphins(new Dolphin[]{dolphin1, dolphin2, dolphin3});
         trainer2.setDolphins(new Dolphin[]{dolphin1, dolphin2});

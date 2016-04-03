@@ -53,6 +53,9 @@ public class GSONTest {
 
         String str = gson.toJson(dolphinarium);
 
+
+        Dolphinarium des = gson.fromJson(str, Dolphinarium.class);
+
         System.out.println(str);
     }
 
