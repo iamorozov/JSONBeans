@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb31fcb8-f068-4de8-8f27-de667f76e970" name="Default" comment="JSONEncoder improve">
+    <list default="true" id="bb31fcb8-f068-4de8-8f27-de667f76e970" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" />
     </list>
@@ -42,11 +42,9 @@
       <file leaf-file-name="JSONEncoder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33275563">
-              <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.08838821">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -894,7 +892,7 @@
       <workItem from="1459264719786" duration="847000" />
       <workItem from="1459415618910" duration="1053000" />
       <workItem from="1459516379504" duration="7425000" />
-      <workItem from="1459676656524" duration="1677000" />
+      <workItem from="1459676656524" duration="1715000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1458983381349</created>
@@ -926,7 +924,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459676704381</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="JSONEncoder improve">
+      <created>1459692069214</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1459692069214</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -962,7 +966,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98399000" />
+    <option name="totallyTimeSpent" value="98437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1047,9 +1051,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1079,9 +1081,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1450,11 +1450,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33275563">
-          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.08838821">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

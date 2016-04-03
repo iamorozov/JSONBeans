@@ -1,15 +1,7 @@
 package jsonbeans;
 
-import beans.*;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
-import javax.swing.event.ChangeEvent;
 import java.beans.*;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 /**
