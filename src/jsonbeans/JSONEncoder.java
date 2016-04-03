@@ -14,12 +14,14 @@ import java.util.*;
 
 /**
  * Created by Morozov Ivan on 07.03.2016.
+ *
+ * Class to make JSON from JavaBean class
  */
 public class JSONEncoder {
 
     private JSONWriter jsonWriter;
 
-    private Set<Class> primitiveSet = new HashSet<Class>(
+    private Set<Class> primitiveSet = new HashSet<>(
             Arrays.asList(new Class[] {
                     Integer.class, Double.class, Float.class,
                     Boolean.class, String.class, Class.class,
@@ -30,7 +32,7 @@ public class JSONEncoder {
             })
     );
 
-    private Set<Object> serialized = new HashSet<Object>();
+    private Set<Object> serialized = new HashSet<>();
 
 //    private Set<>
 
@@ -81,13 +83,7 @@ public class JSONEncoder {
                 serialized.remove(src);
             }
         }
-        catch (IntrospectionException e){
-            e.printStackTrace();
-        }
-        catch (IllegalAccessException e){
-            e.printStackTrace();
-        }
-        catch (InvocationTargetException e){
+        catch (Exception e){
             e.printStackTrace();
         }
     }
