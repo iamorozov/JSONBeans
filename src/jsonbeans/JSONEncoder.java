@@ -99,7 +99,7 @@ public class JSONEncoder {
             }
         //TODO: repair commas on next lines
         jsonWriter.writeCloseBracket();
-        jsonWriter.write(',');
+        jsonWriter.writeComma();
     }
 
     public void saveJSON(Object src)
