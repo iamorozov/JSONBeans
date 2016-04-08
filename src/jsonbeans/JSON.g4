@@ -1,4 +1,4 @@
-grammar JSONGrammar;
+grammar JSON;
 
 json
    : object
