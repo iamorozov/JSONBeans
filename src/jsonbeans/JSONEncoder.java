@@ -26,8 +26,7 @@ public class JSONEncoder {
 
     private Set<Object> serialized = new HashSet<>();
 
-//    private Set<>
-
+    // TODO: serialize class property properly
     private void saveObjectAsJSON(Object src) {
         try{
             if(!serialized.contains(src)){
@@ -63,6 +62,8 @@ public class JSONEncoder {
                             if (!serialized.contains(obj)){
                                 jsonWriter.writeName(propertyName);
                                 saveObjectAsJSON(obj);
+                                if(comma)
+                                    jsonWriter.writeComma();
                             }
                         }
                     }
@@ -96,7 +97,7 @@ public class JSONEncoder {
 
                 if(i != objectArray.length - 1) jsonWriter.write(',');
             }
-
+        //TODO: repair commas on next lines
         jsonWriter.writeCloseBracket();
         jsonWriter.write(',');
     }

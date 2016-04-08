@@ -1,3 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
 tests
+/JSON Beans.iml
+/.idea
 .gitignore

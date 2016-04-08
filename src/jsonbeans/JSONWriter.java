@@ -4,6 +4,8 @@ import java.io.StringWriter;
 
 /**
  * Created by Morozov Ivan on 20.03.2016.
+ *
+ * Class for writing JSON to string
  */
 class JSONWriter {
 
@@ -18,16 +20,6 @@ class JSONWriter {
 
     private JSONWriter(){}
 
-    private String replaceWithCapital(String toReplace){
-        StringBuilder sb = new StringBuilder(toReplace);
-
-        String replaceWith = ((Character)toReplace.charAt(0)).toString().toUpperCase();
-
-        sb.replace(0, 1, replaceWith);
-
-        return toReplace = sb.toString();
-    }
-
     public static JSONWriter getJSONWriter(){
         return new JSONWriter();
     }
@@ -37,7 +29,8 @@ class JSONWriter {
             writer.append("    ");
         }
 
-        writer.append(toAppend + "\n");
+        writer.append(toAppend);
+        writer.append("\n");
     }
 
 //    public void write(String toAppend){
@@ -56,7 +49,7 @@ class JSONWriter {
 
     public void writeValue(Object value){
 
-        String stringValue = "";
+        String stringValue;
 
         stringValue = value instanceof String ? "\"" + value.toString() + "\"" : value.toString();
 
@@ -65,7 +58,7 @@ class JSONWriter {
 
     public void writePair(String name, Object value, boolean comma){
 
-        String stringValue = "";
+        String stringValue;
 
         stringValue = value instanceof String ? "\"" + value.toString() + "\"" : value.toString();
 
@@ -73,6 +66,10 @@ class JSONWriter {
             write("\"" + name + "\"" + ":" + stringValue + ",");
         else
             write("\"" + name + "\"" + ":" + stringValue);
+    }
+
+    public void writeComma(){
+        write(",");
     }
 
     public void writeOpenBrace(){
