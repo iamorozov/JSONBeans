@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb31fcb8-f068-4de8-8f27-de667f76e970" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONBeanVisitor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONDecoder.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONDecoder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONBaseListener.java" afterPath="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONBaseListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONBaseVisitor.java" afterPath="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONBaseVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONLexer.java" afterPath="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONListener.java" afterPath="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONParser.java" afterPath="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONVisitor.java" afterPath="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/jsonbeans/XMLEncoderTest.java" afterPath="$PROJECT_DIR$/tests/jsonbeans/XMLEncoderTest.java" />
     </list>
     <ignored path="JSON Beans.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,8 +97,8 @@
       <file leaf-file-name="JSONBeanVisitor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONBeanVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27546296">
-              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.3935185">
+              <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#287#288#0" expanded="true" />
@@ -1001,7 +992,7 @@
       <workItem from="1460023544410" duration="8229000" />
       <workItem from="1460102747869" duration="3803000" />
       <workItem from="1460121225553" duration="8081000" />
-      <workItem from="1460274887643" duration="9402000" />
+      <workItem from="1460274887643" duration="10019000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1458983381349</created>
@@ -1099,7 +1090,19 @@
       <option name="project" value="LOCAL" />
       <updated>1460130820399</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="new recognizer files generated">
+      <created>1460310389410</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1460310389410</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Deserealization classes create">
+      <created>1460310581971</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1460310581971</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1135,7 +1138,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140650000" />
+    <option name="totallyTimeSpent" value="141267000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1148,7 +1151,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22564103" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1161,7 +1164,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51965815" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65299684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21558245" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21558245" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6786325" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9094017" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1202,7 +1205,9 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="class property serialization improved" />
     <MESSAGE value="recognizer fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="recognizer fix" />
+    <MESSAGE value="new recognizer files generated" />
+    <MESSAGE value="Deserealization classes create" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deserealization classes create" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1639,8 +1644,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONBeanVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27546296">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.3935185">
+          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#287#288#0" expanded="true" />

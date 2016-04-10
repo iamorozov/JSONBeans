@@ -11,6 +11,8 @@ import java.util.*;
  */
 public class JSONEncoder {
 
+    //TODO: Serialize references
+    //TODO: Manage exceptions
     private JSONWriter jsonWriter;
 
     private Set<Class> primitiveSet = new HashSet<>(
@@ -26,7 +28,6 @@ public class JSONEncoder {
 
     private Set<Object> serialized = new HashSet<>();
 
-    // TODO: serialize class property properly
     private void saveObjectAsJSON(Object src) {
         try{
             if(!serialized.contains(src)){
@@ -97,7 +98,6 @@ public class JSONEncoder {
 
                 if(i != objectArray.length - 1) jsonWriter.write(',');
             }
-        //TODO: repair commas on next lines
         jsonWriter.writeCloseBracket();
         jsonWriter.writeComma();
     }
