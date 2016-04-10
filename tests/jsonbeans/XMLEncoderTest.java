@@ -3,6 +3,7 @@ package jsonbeans;
 import beans.*;
 import org.junit.Test;
 
+import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -23,6 +24,7 @@ public class XMLEncoderTest {
 
             xmlEncoder.writeObject(dolphinarium);
             xmlEncoder.close();
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

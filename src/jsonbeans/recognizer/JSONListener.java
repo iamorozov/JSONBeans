@@ -1,4 +1,3 @@
-// Generated from D:/Dropbox/������ 2 ����/JSON Beans/src/jsonbeans\JSON.g4 by ANTLR 4.5.1
 package jsonbeans.recognizer;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
