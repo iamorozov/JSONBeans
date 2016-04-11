@@ -13,6 +13,7 @@ public class JSONEncoder {
 
     //TODO: Serialize references
     //TODO: Manage exceptions
+    //TODO: Refactoring
     private JSONWriter jsonWriter;
 
     private Set<Class> primitiveSet = new HashSet<>(

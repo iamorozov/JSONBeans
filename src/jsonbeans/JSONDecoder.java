@@ -14,12 +14,15 @@ import org.antlr.v4.runtime.tree.ParseTree;
 public class JSONDecoder{
 
     String jsonString;
+    Class desClass;
 
-    JSONDecoder(String jsonString){
+    JSONDecoder(String jsonString, Class classOfDeserialization){
         this.jsonString = jsonString;
+        desClass = classOfDeserialization;
     }
 
-    public Object readJSON(){
+    public Object readJSON()
+            throws JSONDeserializationException{
 
         ANTLRInputStream inputStream = new ANTLRInputStream(jsonString);
         JSONLexer lexer = new JSONLexer(inputStream);
@@ -27,7 +30,7 @@ public class JSONDecoder{
         JSONParser parser = new JSONParser(tokens);
         ParseTree tree = parser.json();
 
-        JSONBeanVisitor visitor = new JSONBeanVisitor();
+        JSONBeanVisitor visitor = new JSONBeanVisitor(desClass);
 
         return visitor.visit(tree);
     }
