@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
  *
  * Class used for lexical division of json object
  */
-@Deprecated
+
 public class JSONTokenizer {
 
     StringTokenizer tokenizer;
