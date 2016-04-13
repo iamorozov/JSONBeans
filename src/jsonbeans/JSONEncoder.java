@@ -11,6 +11,7 @@ import java.util.*;
  */
 public class JSONEncoder {
 
+    //TODO: class property first!!!
     //TODO: Serialize references
     //TODO: Manage exceptions
     //TODO: Refactoring
