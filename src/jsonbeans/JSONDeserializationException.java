@@ -1,7 +1,15 @@
 package jsonbeans;
 
 /**
- * Created by Morozov Ivan on 03.04.2016.
+ * An exception for errors in JSON string
  */
 public class JSONDeserializationException extends Exception {
+
+    public JSONDeserializationException(String message) {
+        super(message);
+    }
+
+    public JSONDeserializationException(String message, int line) {
+        super(message + ", line : " + line);
+    }
 }
