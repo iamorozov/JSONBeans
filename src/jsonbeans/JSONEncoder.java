@@ -11,23 +11,11 @@ import java.util.*;
  */
 public class JSONEncoder {
 
-    //TODO: class property first!!!
     //TODO: Serialize references
     //TODO: Manage exceptions
     //TODO: Refactoring
     //TODO: don't Serialize null values
     private JSONWriter jsonWriter;
-
-    private Set<Class> primitiveSet = new HashSet<>(
-            Arrays.asList(new Class[] {
-                    Integer.class, Double.class, Float.class,
-                    Boolean.class, String.class, Class.class,
-                    Byte.class, Short.class, Long.class,
-                    Character.class, int.class, double.class,
-                    float.class, boolean.class, byte.class,
-                    short.class, long.class, char.class
-            })
-    );
 
     private Set<Object> serialized = new HashSet<>();
 
@@ -38,31 +26,38 @@ public class JSONEncoder {
                 serialized.add(src);//put object into hashSet to prevent multiple serialization
 
                 BeanInfo beanInfo = Introspector.getBeanInfo(src.getClass());
-                PropertyDescriptor[] properties = beanInfo.getPropertyDescriptors();
+
+                LinkedList<PropertyDescriptor> properties = new LinkedList<>(Arrays.asList(beanInfo.getPropertyDescriptors()));
+                properties.removeIf(p -> p.getName().equals("class"));
 
                 jsonWriter.writeOpenBrace();
 
+                boolean comma = false;//to distinguish whether comma is needed after a pair or not
+
+                if(!properties.isEmpty())
+                    comma = true;
+
+                jsonWriter.writeClass(src.getClass(), comma);
+
                 String propertyName;
 
-                boolean comma = true;//to distinguish whether comma is needed after a pair or not
+                for (PropertyDescriptor property: properties) {
 
-                for (int i = 0; i < properties.length; i++) {
-
-                    if (i == properties.length - 1)
+                    if (property == properties.getLast())
                         comma = false;
 
-                    propertyName = properties[i].getName();
+                    propertyName = property.getName();
 
-                    if (!primitiveSet.contains(properties[i].getPropertyType())){
+                    if (!JSONUtil.primitiveSet.contains(property.getPropertyType())){
 
-                        if(properties[i] instanceof IndexedPropertyDescriptor){
+                        if(property instanceof IndexedPropertyDescriptor){
 
-                            Object[] propsArray = (Object[])properties[i].getReadMethod().invoke(src);
+                            Object[] propsArray = (Object[])property.getReadMethod().invoke(src);
 
-                            saveArrayAsJSON((IndexedPropertyDescriptor)properties[i], propsArray);
+                            saveArrayAsJSON((IndexedPropertyDescriptor)property, propsArray);
                         }
                         else {
-                            Object obj = properties[i].getReadMethod().invoke(src);
+                            Object obj = property.getReadMethod().invoke(src);
                             if (!serialized.contains(obj)){
                                 jsonWriter.writeName(propertyName);
                                 saveObjectAsJSON(obj);
@@ -72,7 +67,7 @@ public class JSONEncoder {
                         }
                     }
                     else
-                        jsonWriter.writePair(propertyName, properties[i].getReadMethod().invoke(src), comma);
+                        jsonWriter.writePair(propertyName, property.getReadMethod().invoke(src), comma);
                 }
 
                 jsonWriter.writeCloseBrace();
@@ -89,7 +84,7 @@ public class JSONEncoder {
         jsonWriter.writeName(indexedProp.getName());
         jsonWriter.writeOpenBracket();
 
-        if (primitiveSet.contains(indexedProp.getPropertyType()))
+        if (JSONUtil.primitiveSet.contains(indexedProp.getPropertyType()))
             for (int i = 0; i < objectArray.length; i++) {
                 jsonWriter.writeValue(objectArray[i]);
 

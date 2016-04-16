@@ -64,6 +64,10 @@ class JSONWriter {
             write("\"" + name + "\"" + ":" + getStringValue(value));
     }
 
+    public void writeClass(Class beanClass, boolean comma){
+        writePair("class", beanClass.getCanonicalName(), comma);
+    }
+
 
     public void writeComma(){
         write(",");

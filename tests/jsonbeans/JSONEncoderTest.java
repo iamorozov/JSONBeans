@@ -8,7 +8,7 @@ import org.junit.Assert.*;
 public class JSONEncoderTest {
 
     @Test
-    public void jsonEncoderTest(){
+    public void jsonEncoderDolphinariumTest(){
 
         Dolphinarium dolphinarium = DolphinsGraph.buildDolphinarium();
 
@@ -27,5 +27,12 @@ public class JSONEncoderTest {
             e.printStackTrace();
         }
 
+    }
+
+    @Test
+    public void jsonEncoderSimpleBeanTest(){
+        String s = JSONTokenizerTest.buildTestJSONString();
+
+        System.out.println(s);
     }
 }
