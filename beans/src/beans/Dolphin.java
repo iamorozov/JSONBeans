@@ -1,8 +1,6 @@
 package beans;
 
-/**
- * Created by Morozov Ivan on 07.03.2016.
- */
+
 public class Dolphin {
 
     private static int num = 0;
