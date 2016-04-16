@@ -3,6 +3,9 @@ package beans;
 
 public class TestBean {
 
+
+    //TODO: test class property
+
     //Numerical primitives
     private byte b;
     private short sh;

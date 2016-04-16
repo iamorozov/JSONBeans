@@ -1,14 +1,20 @@
 package jsonbeans;
 
 
+import beans.Dolphin;
 import com.sun.org.apache.xalan.internal.xsltc.runtime.Hashtable;
+import com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
+import java.beans.PropertyDescriptor;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StreamTokenizer;
 import java.io.StringReader;
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Morozov Ivan on 07.04.2016.
@@ -34,7 +40,7 @@ public class JSONTokenizer {
 
     StreamTokenizer tokenizer;
 
-    private Hashtable reservedSymbols;
+    private Map reservedSymbols;
 
     private String currentToken;
 
@@ -74,7 +80,7 @@ public class JSONTokenizer {
 
     void initSymbols(){
 
-        reservedSymbols = new Hashtable();
+        reservedSymbols = new HashMap();
 
         reservedSymbols.put(LEFT_BRACE, LEFT_BRACE);
         reservedSymbols.put(LEFT_BRACKET, LEFT_BRACKET);
@@ -87,7 +93,7 @@ public class JSONTokenizer {
 
     void getNextToken() throws JSONDeserializationException{
         if(!hasMoreTokens())
-            throw new JSONDeserializationException();//TODO:manage exceptions
+            JSONError("Unexpected end of file", tokenizer.lineno());
 
         try{
             switch (tokenizer.ttype){
@@ -101,13 +107,13 @@ public class JSONTokenizer {
                     break;
                 default:
                     char charToken = (char)tokenizer.ttype;
-                    if(reservedSymbols.contains(charToken)){
+                    if(reservedSymbols.containsValue(charToken)){
                         tokenType = TYPE_SYMBOL;
                         currentToken = String.valueOf(charToken);
                         break;
                     }
                     else {
-                        //TODO: manage exceptions
+                        JSONError("Unexpected token: " + charToken, tokenizer.lineno());
                     }
             }
 
@@ -152,7 +158,31 @@ public class JSONTokenizer {
 
             BeanInfo beanInfo = java.beans.Introspector.getBeanInfo(aClass);
 
+            Map<String, PropertyDescriptor> propertyMap = getPropertyMap(beanInfo.getPropertyDescriptors());
 
+            getNextToken();
+
+            while (!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(RIGHT_BRACE)))){
+
+                if(!(tokenType == TYPE_IDENTIFIER))
+                    JSONError("Missing type identifier", tokenizer.lineno());
+
+                PropertyDescriptor property = propertyMap.get(currentToken);
+
+                if(JSONUtil.primitiveSet.contains(property.getPropertyType())){
+                    getNextToken();
+
+                    if(!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(COLON))))
+                        JSONError("Missing \':\'", tokenizer.lineno());
+
+                    getNextToken();
+
+                    readPrimitive(property, instance);
+                }
+
+
+                getNextToken();
+            }
 
             return instance;
         }
@@ -170,8 +200,66 @@ public class JSONTokenizer {
         }
     }
 
+    void readPrimitive(PropertyDescriptor property, Object instance)
+            throws ReflectiveOperationException, JSONDeserializationException{
+
+        Class<?> propertyType = property.getPropertyType();
+
+        if(JSONUtil.numberTypes.contains(propertyType)){
+
+            if(tokenType != TYPE_INT_CONST)
+                JSONError("Wrong value!", tokenizer.lineno());
+
+            Number value = 0;
+
+            if(propertyType == Byte.class || propertyType == byte.class)
+                value = Double.valueOf(currentToken).byteValue();
+
+            else if(propertyType == Short.class || propertyType == short.class)
+                value = Double.valueOf(currentToken).shortValue();
+
+            else if(propertyType == Integer.class || propertyType == int.class)
+                value = Double.valueOf(currentToken).intValue();
+
+            else if(propertyType == Long.class || propertyType == long.class)
+                value = Double.valueOf(currentToken).longValue();
+
+            else if(propertyType == Short.class || propertyType == short.class)
+                value = Double.valueOf(currentToken).shortValue();
+
+            else if(propertyType == Float.class || propertyType == float.class)
+                value = Double.valueOf(currentToken).floatValue();
+
+            else if(propertyType == Double.class || propertyType == double.class)
+                value = Double.valueOf(currentToken).floatValue();
+
+            property.getWriteMethod().invoke(instance, value);
+        }
+        else if(JSONUtil.characterSequenceTypes.contains(propertyType)){
+            if(propertyType == Character.class || propertyType == char.class)
+                property.getWriteMethod().invoke(instance, currentToken.charAt(0));
+            else
+                property.getWriteMethod().invoke(instance, currentToken);
+        }
+        else if(JSONUtil.logicalTypes.contains(propertyType))
+            property.getWriteMethod().invoke(instance, Boolean.valueOf(currentToken));
+
+        //TODO: Check, whether property could be of type Class or not
+    }
+
+    Map getPropertyMap(PropertyDescriptor[] descriptors){
+
+        HashMap<String, PropertyDescriptor> propertyDescriptorHashMap = new HashMap<>();
+
+        for(PropertyDescriptor descriptor: descriptors){
+            propertyDescriptorHashMap.put(descriptor.getName(), descriptor);
+        }
+
+        return propertyDescriptorHashMap;
+    }
+
     public void JSONError(String message, int line)throws JSONDeserializationException{
-        throw new JSONDeserializationException();//TODO: manage exceptions
+        throw new JSONDeserializationException(message, line);
     }
 
 }
