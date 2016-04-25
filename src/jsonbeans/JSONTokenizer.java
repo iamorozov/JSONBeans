@@ -2,10 +2,12 @@ package jsonbeans;
 
 
 import beans.Dolphin;
+import com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator;
 import com.sun.org.apache.xalan.internal.xsltc.runtime.Hashtable;
 import com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray;
 
 import java.beans.BeanInfo;
+import java.beans.IndexedPropertyDescriptor;
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
 import java.io.IOException;
@@ -169,16 +171,17 @@ public class JSONTokenizer {
 
                 PropertyDescriptor property = propertyMap.get(currentToken);
 
-                if(JSONUtil.primitiveSet.contains(property.getPropertyType())){
-                    getNextToken();
+                getNextToken();
 
-                    if(!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(COLON))))
-                        JSONError("Missing \':\'", tokenizer.lineno());
+                if(!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(COLON))))
+                    JSONError("Missing \':\'", tokenizer.lineno());
 
-                    getNextToken();
-
+                if(JSONUtil.primitiveSet.contains(property.getPropertyType()))
                     readPrimitive(property, instance);
-                }
+                else if(property instanceof IndexedPropertyDescriptor)
+                    readArray();
+                else
+                    property.getWriteMethod().invoke(instance, readObject());
 
 
                 getNextToken();
@@ -200,8 +203,13 @@ public class JSONTokenizer {
         }
     }
 
+    private void readArray() {
+    }
+
     void readPrimitive(PropertyDescriptor property, Object instance)
             throws ReflectiveOperationException, JSONDeserializationException{
+
+        getNextToken();
 
         Class<?> propertyType = property.getPropertyType();
 
@@ -243,11 +251,11 @@ public class JSONTokenizer {
         }
         else if(JSONUtil.logicalTypes.contains(propertyType))
             property.getWriteMethod().invoke(instance, Boolean.valueOf(currentToken));
-
-        //TODO: Check, whether property could be of type Class or not
+        else if(propertyType == Class.class)
+            property.getWriteMethod().invoke(instance, Class.forName(currentToken));
     }
 
-    Map getPropertyMap(PropertyDescriptor[] descriptors){
+    Map<String, PropertyDescriptor> getPropertyMap(PropertyDescriptor[] descriptors){
 
         HashMap<String, PropertyDescriptor> propertyDescriptorHashMap = new HashMap<>();
 

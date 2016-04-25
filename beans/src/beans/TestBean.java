@@ -19,6 +19,43 @@ public class TestBean {
     private String str;
     private char ch;
     private boolean bool;
+    private Class someClass;
+
+    private Dolphin dolphin;
+
+    private Integer[] intArray;
+
+    public Integer[] getIntArray() {
+        return intArray;
+    }
+
+    public void setIntArray(Integer[] intArray) {
+        this.intArray = intArray;
+    }
+
+    public Integer getIntArray(int index)throws ArrayIndexOutOfBoundsException{
+        return intArray[index];
+    }
+
+    public void setIntArray(int index, int value) throws ArrayIndexOutOfBoundsException{
+        intArray[index] = value;
+    }
+
+    public Dolphin getDolphin() {
+        return dolphin;
+    }
+
+    public void setDolphin(Dolphin dolphin) {
+        this.dolphin = dolphin;
+    }
+
+    public Class getSomeClass() {
+        return someClass;
+    }
+
+    public void setSomeClass(Class someClass) {
+        this.someClass = someClass;
+    }
 
     public String getStr() {
         return str;

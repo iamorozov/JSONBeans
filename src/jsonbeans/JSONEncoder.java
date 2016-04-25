@@ -11,6 +11,7 @@ import java.util.*;
  */
 public class JSONEncoder {
 
+    //TODO: Problem with array casting and serializing of non primitive types
     //TODO: Serialize references
     //TODO: Manage exceptions
     //TODO: Refactoring
@@ -58,7 +59,7 @@ public class JSONEncoder {
                         }
                         else {
                             Object obj = property.getReadMethod().invoke(src);
-                            if (!serialized.contains(obj)){
+                            if (!serialized.contains(obj) && obj != null){
                                 jsonWriter.writeName(propertyName);
                                 saveObjectAsJSON(obj);
                                 if(comma)
