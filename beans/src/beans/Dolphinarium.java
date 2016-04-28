@@ -1,9 +1,8 @@
 package beans;
 
-/**
- * Created by Morozov Ivan on 03.03.2016.
- */
-public class Dolphinarium {
+
+
+public class Dolphinarium extends TestBean{
 
     public Dolphinarium(){
         name = "Moscow Dolphins";

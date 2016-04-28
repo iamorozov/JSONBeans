@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb31fcb8-f068-4de8-8f27-de667f76e970" name="Default" comment="Some repairs on JSONEncoder&#10;proper serializing of primitive Arrays">
+    <list default="true" id="bb31fcb8-f068-4de8-8f27-de667f76e970" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/beans/src/beans/ArraysBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/beans/src/beans/PrimitivesBean.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/jsonbeans/GSONTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/jsonbeans/JacksonTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/jsonbeans/XMLEncoderTest.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JSON_Beans_jar/JSON Beans.jar" afterPath="$PROJECT_DIR$/out/artifacts/JSON_Beans_jar/JSON Beans.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONUtil.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONWriter.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONWriter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beans/src/beans/Dolphinarium.java" afterPath="$PROJECT_DIR$/beans/src/beans/Dolphinarium.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beans/src/beans/TestBean.java" afterPath="$PROJECT_DIR$/beans/src/beans/TestBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java" afterPath="$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java" />
     </list>
     <ignored path="JSON Beans.iws" />
@@ -30,60 +35,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JSONEncoder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java">
+      <file leaf-file-name="JSONTokenizer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="131" column="31" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
-              <folding>
-                <element signature="e#5151#5152#0" expanded="true" />
-                <element signature="e#5195#5196#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONWriter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="-289">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4297#4298#0" expanded="true" />
-                <element signature="e#4355#4356#0" expanded="true" />
+                <element signature="e#7478#7588#1" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JSONWriterTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONWriterTest.java">
+      <file leaf-file-name="JSONDecoderTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONDecoderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="74" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beans/src/beans/TestBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            <state relative-caret-position="85">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,8 +61,8 @@
       <file leaf-file-name="JSONEncoderTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+            <state relative-caret-position="272">
+              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -102,21 +71,194 @@
       <file leaf-file-name="JSONTokenizerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONTokenizerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="731">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArraysBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/beans/src/beans/ArraysBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+              <folding>
+                <element signature="e#503#504#0" expanded="true" />
+                <element signature="e#530#531#0" expanded="true" />
+                <element signature="e#569#570#0" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
+                <element signature="e#637#638#0" expanded="true" />
+                <element signature="e#671#672#0" expanded="true" />
+                <element signature="e#719#720#0" expanded="true" />
+                <element signature="e#754#755#0" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#898#899#0" expanded="true" />
+                <element signature="e#938#939#0" expanded="true" />
+                <element signature="e#974#975#0" expanded="true" />
+                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#1063#1064#0" expanded="true" />
+                <element signature="e#1095#1096#0" expanded="true" />
+                <element signature="e#1123#1124#0" expanded="true" />
+                <element signature="e#1165#1166#0" expanded="true" />
+                <element signature="e#1199#1200#0" expanded="true" />
+                <element signature="e#1237#1238#0" expanded="true" />
+                <element signature="e#1272#1273#0" expanded="true" />
+                <element signature="e#1322#1323#0" expanded="true" />
+                <element signature="e#1358#1359#0" expanded="true" />
+                <element signature="e#1390#1391#0" expanded="true" />
+                <element signature="e#1418#1419#0" expanded="true" />
+                <element signature="e#1460#1461#0" expanded="true" />
+                <element signature="e#1494#1495#0" expanded="true" />
+                <element signature="e#1532#1533#0" expanded="true" />
+                <element signature="e#1567#1568#0" expanded="true" />
+                <element signature="e#1617#1618#0" expanded="true" />
+                <element signature="e#1653#1654#0" expanded="true" />
+                <element signature="e#1689#1690#0" expanded="true" />
+                <element signature="e#1719#1720#0" expanded="true" />
+                <element signature="e#1767#1768#0" expanded="true" />
+                <element signature="e#1805#1806#0" expanded="true" />
+                <element signature="e#1847#1848#0" expanded="true" />
+                <element signature="e#1884#1885#0" expanded="true" />
+                <element signature="e#1938#1939#0" expanded="true" />
+                <element signature="e#1976#1977#0" expanded="true" />
+                <element signature="e#2010#2011#0" expanded="true" />
+                <element signature="e#2039#2040#0" expanded="true" />
+                <element signature="e#2084#2085#0" expanded="true" />
+                <element signature="e#2120#2121#0" expanded="true" />
+                <element signature="e#2160#2161#0" expanded="true" />
+                <element signature="e#2196#2197#0" expanded="true" />
+                <element signature="e#2248#2249#0" expanded="true" />
+                <element signature="e#2285#2286#0" expanded="true" />
+                <element signature="e#2323#2324#0" expanded="true" />
+                <element signature="e#2354#2355#0" expanded="true" />
+                <element signature="e#2405#2406#0" expanded="true" />
+                <element signature="e#2445#2446#0" expanded="true" />
+                <element signature="e#2489#2490#0" expanded="true" />
+                <element signature="e#2527#2528#0" expanded="true" />
+                <element signature="e#2583#2584#0" expanded="true" />
+                <element signature="e#2622#2623#0" expanded="true" />
+                <element signature="e#2654#2655#0" expanded="true" />
+                <element signature="e#2682#2683#0" expanded="true" />
+                <element signature="e#2724#2725#0" expanded="true" />
+                <element signature="e#2758#2759#0" expanded="true" />
+                <element signature="e#2796#2797#0" expanded="true" />
+                <element signature="e#2831#2832#0" expanded="true" />
+                <element signature="e#2881#2882#0" expanded="true" />
+                <element signature="e#2917#2918#0" expanded="true" />
+                <element signature="e#2955#2956#0" expanded="true" />
+                <element signature="e#2986#2987#0" expanded="true" />
+                <element signature="e#3037#3038#0" expanded="true" />
+                <element signature="e#3077#3078#0" expanded="true" />
+                <element signature="e#3121#3122#0" expanded="true" />
+                <element signature="e#3159#3160#0" expanded="true" />
+                <element signature="e#3215#3216#0" expanded="true" />
+                <element signature="e#3254#3255#0" expanded="true" />
+                <element signature="e#3289#3290#0" expanded="true" />
+                <element signature="e#3320#3321#0" expanded="true" />
+                <element signature="e#3368#3369#0" expanded="true" />
+                <element signature="e#3408#3409#0" expanded="true" />
+                <element signature="e#3448#3449#0" expanded="true" />
+                <element signature="e#3486#3487#0" expanded="true" />
+                <element signature="e#3539#3540#0" expanded="true" />
+                <element signature="e#3578#3579#0" expanded="true" />
+                <element signature="e#3615#3616#0" expanded="true" />
+                <element signature="e#3647#3648#0" expanded="true" />
+                <element signature="e#3698#3699#0" expanded="true" />
+                <element signature="e#3740#3741#0" expanded="true" />
+                <element signature="e#3783#3784#0" expanded="true" />
+                <element signature="e#3822#3823#0" expanded="true" />
+                <element signature="e#3877#3878#0" expanded="true" />
+                <element signature="e#3917#3918#0" expanded="true" />
+                <element signature="e#3952#3953#0" expanded="true" />
+                <element signature="e#3983#3984#0" expanded="true" />
+                <element signature="e#4031#4032#0" expanded="true" />
+                <element signature="e#4071#4072#0" expanded="true" />
+                <element signature="e#4112#4113#0" expanded="true" />
+                <element signature="e#4150#4151#0" expanded="true" />
+                <element signature="e#4203#4204#0" expanded="true" />
+                <element signature="e#4242#4243#0" expanded="true" />
+                <element signature="e#4281#4282#0" expanded="true" />
+                <element signature="e#4314#4315#0" expanded="true" />
+                <element signature="e#4368#4369#0" expanded="true" />
+                <element signature="e#4412#4413#0" expanded="true" />
+                <element signature="e#4457#4458#0" expanded="true" />
+                <element signature="e#4497#4498#0" expanded="true" />
+                <element signature="e#4554#4555#0" expanded="true" />
+                <element signature="e#4595#4596#0" expanded="true" />
+                <element signature="e#4632#4633#0" expanded="true" />
+                <element signature="e#4664#4665#0" expanded="true" />
+                <element signature="e#4715#4716#0" expanded="true" />
+                <element signature="e#4757#4758#0" expanded="true" />
+                <element signature="e#4800#4801#0" expanded="true" />
+                <element signature="e#4839#4840#0" expanded="true" />
+                <element signature="e#4894#4895#0" expanded="true" />
+                <element signature="e#4934#4935#0" expanded="true" />
+                <element signature="e#4976#4977#0" expanded="true" />
+                <element signature="e#5009#5010#0" expanded="true" />
+                <element signature="e#5066#5067#0" expanded="true" />
+                <element signature="e#5110#5111#0" expanded="true" />
+                <element signature="e#5152#5153#0" expanded="true" />
+                <element signature="e#5192#5193#0" expanded="true" />
+                <element signature="e#5252#5253#0" expanded="true" />
+                <element signature="e#5293#5294#0" expanded="true" />
+                <element signature="e#5334#5335#0" expanded="true" />
+                <element signature="e#5368#5369#0" expanded="true" />
+                <element signature="e#5425#5426#0" expanded="true" />
+                <element signature="e#5471#5472#0" expanded="true" />
+                <element signature="e#5518#5519#0" expanded="true" />
+                <element signature="e#5559#5560#0" expanded="true" />
+                <element signature="e#5618#5619#0" expanded="true" />
+                <element signature="e#5660#5661#0" expanded="true" />
+                <element signature="e#5695#5696#0" expanded="true" />
+                <element signature="e#5725#5726#0" expanded="true" />
+                <element signature="e#5772#5773#0" expanded="true" />
+                <element signature="e#5810#5811#0" expanded="true" />
+                <element signature="e#5851#5852#0" expanded="true" />
+                <element signature="e#5888#5889#0" expanded="true" />
+                <element signature="e#5941#5942#0" expanded="true" />
+                <element signature="e#5979#5980#0" expanded="true" />
+                <element signature="e#6015#6016#0" expanded="true" />
+                <element signature="e#6045#6046#0" expanded="true" />
+                <element signature="e#6093#6094#0" expanded="true" />
+                <element signature="e#6131#6132#0" expanded="true" />
+                <element signature="e#6173#6174#0" expanded="true" />
+                <element signature="e#6210#6211#0" expanded="true" />
+                <element signature="e#6264#6265#0" expanded="true" />
+                <element signature="e#6302#6303#0" expanded="true" />
+                <element signature="e#6340#6341#0" expanded="true" />
+                <element signature="e#6371#6372#0" expanded="true" />
+                <element signature="e#6422#6423#0" expanded="true" />
+                <element signature="e#6462#6463#0" expanded="true" />
+                <element signature="e#6506#6507#0" expanded="true" />
+                <element signature="e#6544#6545#0" expanded="true" />
+                <element signature="e#6600#6601#0" expanded="true" />
+                <element signature="e#6639#6640#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestStringBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/jsonbeans/TestStringBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestClassFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/jsonbeans/TestClassFactory.java">
+      <file leaf-file-name="TestBeanFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/jsonbeans/TestBeanFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="1377">
+              <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,8 +268,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -147,19 +289,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/beans/src/beans/mainBean.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONBeansPanel.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/BeanInstantiator.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONSerializationException.java" />
         <option value="$PROJECT_DIR$/beans/src/beans/Pool.java" />
         <option value="$PROJECT_DIR$/beans/src/beans/Trainer.java" />
-        <option value="$PROJECT_DIR$/beans/src/beans/Dolphinarium.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONBeansManager.java" />
         <option value="$PROJECT_DIR$/beans/src/beans/StripedDolphin.java" />
         <option value="$PROJECT_DIR$/beans/src/beans/DottetDolphin.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/JacksonTest.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/GSONTest.java" />
-        <option value="$PROJECT_DIR$/tests/jsonbeans/DolphinsGraph.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/TokenizerTest.java" />
         <option value="$PROJECT_DIR$/gen/jsonbeans/JSONGrammarBaseListener.java" />
         <option value="$PROJECT_DIR$/gen/jsonbeans/JSONGrammarVisitor.java" />
@@ -174,7 +313,6 @@
         <option value="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONListener.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONLexer.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONBaseListener.java" />
-        <option value="$PROJECT_DIR$/tests/jsonbeans/XMLEncoderTest.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONBeanVisitor.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONDecoder.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
@@ -182,18 +320,26 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONDeserializationException.java" />
         <option value="$PROJECT_DIR$/beans/src/beans/Dolphin.java" />
-        <option value="$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/TestSber.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/StreamTokenizerTest.java" />
-        <option value="$PROJECT_DIR$/tests/jsonbeans/JSONDecoderTest.java" />
-        <option value="$PROJECT_DIR$/tests/jsonbeans/JSONTokenizerTest.java" />
-        <option value="$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONWriter.java" />
-        <option value="$PROJECT_DIR$/tests/jsonbeans/JSONWriterTest.java" />
-        <option value="$PROJECT_DIR$/beans/src/beans/TestBean.java" />
-        <option value="$PROJECT_DIR$/tests/jsonbeans/TestClassFactory.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONUtil.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" />
+        <option value="$PROJECT_DIR$/beans/src/beans/AnotherTestBean.java" />
+        <option value="$PROJECT_DIR$/tests/jsonbeans/JSONWriterTest.java" />
+        <option value="$PROJECT_DIR$/beans/src/beans/TestBean.java" />
+        <option value="$PROJECT_DIR$/beans/src/beans/ArraysBean.java" />
+        <option value="$PROJECT_DIR$/beans/src/beans/PrimitivesBean.java" />
+        <option value="$PROJECT_DIR$/beans/src/beans/Dolphinarium.java" />
+        <option value="$PROJECT_DIR$/tests/jsonbeans/DolphinsGraph.java" />
+        <option value="$PROJECT_DIR$/tests/jsonbeans/TestBeanFactory.java" />
+        <option value="$PROJECT_DIR$/tests/jsonbeans/XMLEncoderTest.java" />
+        <option value="$PROJECT_DIR$/tests/jsonbeans/TestClassFactory.java" />
+        <option value="$PROJECT_DIR$/tests/jsonbeans/TestStringBuilder.java" />
+        <option value="$PROJECT_DIR$/tests/jsonbeans/JSONTokenizerTest.java" />
+        <option value="$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java" />
+        <option value="$PROJECT_DIR$/tests/jsonbeans/JSONDecoderTest.java" />
+        <option value="$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java" />
       </list>
     </option>
   </component>
@@ -213,8 +359,8 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="362" />
-    <option name="width" value="1382" />
+    <option name="x" value="369" />
+    <option name="width" value="1554" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -375,85 +521,7 @@
       <recent name="D:\Dropbox\Курсач 2 курс\JSON Beans\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JSONEncoderTest.jsonEncoderSimpleBeanTest">
-    <configuration default="false" name="JSONTokenizerTest.testIndexedProps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="jsonbeans.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JSON Beans" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jsonbeans" />
-      <option name="MAIN_CLASS_NAME" value="jsonbeans.JSONTokenizerTest" />
-      <option name="METHOD_NAME" value="testIndexedProps" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="JSONWriterTest.testWriteArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="jsonbeans.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JSON Beans" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jsonbeans" />
-      <option name="MAIN_CLASS_NAME" value="jsonbeans.JSONWriterTest" />
-      <option name="METHOD_NAME" value="testWriteArray" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="JSONWriterTest.testWriteArrayOfPrimitives" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="jsonbeans.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JSON Beans" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jsonbeans" />
-      <option name="MAIN_CLASS_NAME" value="jsonbeans.JSONWriterTest" />
-      <option name="METHOD_NAME" value="testWriteArrayOfPrimitives" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.JSONEncoderTest.jsonEncoderDolphinariumTest">
     <configuration default="false" name="JSONWriterTest.writeArrayOfWrappers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -493,6 +561,84 @@
       <option name="PACKAGE_NAME" value="jsonbeans" />
       <option name="MAIN_CLASS_NAME" value="jsonbeans.JSONEncoderTest" />
       <option name="METHOD_NAME" value="jsonEncoderSimpleBeanTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="JSONTokenizerTest.deserializeArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jsonbeans.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JSON Beans" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jsonbeans" />
+      <option name="MAIN_CLASS_NAME" value="jsonbeans.JSONTokenizerTest" />
+      <option name="METHOD_NAME" value="deserializeArrayTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="JSONTokenizerTest.testIndexedProps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jsonbeans.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JSON Beans" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jsonbeans" />
+      <option name="MAIN_CLASS_NAME" value="jsonbeans.JSONTokenizerTest" />
+      <option name="METHOD_NAME" value="testIndexedProps" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="JSONEncoderTest.jsonEncoderDolphinariumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jsonbeans.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JSON Beans" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jsonbeans" />
+      <option name="MAIN_CLASS_NAME" value="jsonbeans.JSONEncoderTest" />
+      <option name="METHOD_NAME" value="jsonEncoderDolphinariumTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -929,19 +1075,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.JSONEncoder" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.JSONTokenizerTest.testIndexedProps" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.JSONWriterTest.testWriteArray" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JSONWriterTest.testWriteArrayOfPrimitives" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JSONWriterTest.writeArrayOfWrappers" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.JSONEncoderTest.jsonEncoderSimpleBeanTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.JSONWriterTest.writeArrayOfWrappers" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.JSONEncoderTest.jsonEncoderSimpleBeanTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.JSONTokenizerTest.deserializeArrayTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.JSONTokenizerTest.testIndexedProps" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.JSONEncoderTest.jsonEncoderDolphinariumTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JSONEncoderTest.jsonEncoderSimpleBeanTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.JSONWriterTest.writeArrayOfWrappers" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.JSONWriterTest.testWriteArrayOfPrimitives" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.JSONWriterTest.testWriteArray" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.JSONTokenizerTest.testIndexedProps" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.JSONEncoderTest.jsonEncoderDolphinariumTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.JSONTokenizerTest.testIndexedProps" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.JSONTokenizerTest.deserializeArrayTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.JSONEncoderTest.jsonEncoderSimpleBeanTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.JSONWriterTest.writeArrayOfWrappers" />
       </list>
     </recent_temporary>
   </component>
@@ -1024,7 +1170,7 @@
       <workItem from="1461500998485" duration="1435000" />
       <workItem from="1461576293566" duration="3802000" />
       <workItem from="1461610784902" duration="754000" />
-      <workItem from="1461836313688" duration="10696000" />
+      <workItem from="1461836313688" duration="24484000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1458983381349</created>
@@ -1243,21 +1389,19 @@
       <option name="project" value="LOCAL" />
       <updated>1461576524297</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Some repairs on JSONEncoder&#10;proper serializing of primitive Arrays">
+      <created>1461860066851</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1461860066851</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JSONEncoderTest_jsonEncoderSimpleBeanTest - 2016.04.28 at 18h 39m 05s.xml">
-      <configuration name="JSONEncoderTest.jsonEncoderSimpleBeanTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JSONEncoderTest_jsonEncoderSimpleBeanTest - 2016.04.28 at 18h 58m 15s.xml">
-      <configuration name="JSONEncoderTest.jsonEncoderSimpleBeanTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JSONEncoderTest_jsonEncoderSimpleBeanTest - 2016.04.28 at 19h 00m 25s.xml">
-      <configuration name="JSONEncoderTest.jsonEncoderSimpleBeanTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JSONEncoderTest_jsonEncoderSimpleBeanTest - 2016.04.28 at 19h 03m 45s.xml">
-      <configuration name="JSONEncoderTest.jsonEncoderSimpleBeanTest" configurationId="JUnit" />
+    <history-entry file="JSONEncoderTest_jsonEncoderDolphinariumTest - 2016.04.29 at 02h 17m 00s.xml">
+      <configuration name="JSONEncoderTest.jsonEncoderDolphinariumTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="JSONEncoderTest_jsonEncoderSimpleBeanTest - 2016.04.28 at 19h 06m 13s.xml">
       <configuration name="JSONEncoderTest.jsonEncoderSimpleBeanTest" configurationId="JUnit" />
@@ -1265,21 +1409,30 @@
     <history-entry file="JSONEncoderTest_jsonEncoderSimpleBeanTest - 2016.04.28 at 19h 07m 52s.xml">
       <configuration name="JSONEncoderTest.jsonEncoderSimpleBeanTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JSONWriterTest_testWriteArray - 2016.04.28 at 18h 31m 35s.xml">
-      <configuration name="JSONWriterTest.testWriteArray" configurationId="JUnit" />
+    <history-entry file="JSONTokenizerTest_deserializeArrayTest - 2016.04.28 at 20h 33m 46s.xml">
+      <configuration name="JSONTokenizerTest.deserializeArrayTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JSONWriterTest_testWriteArrayOfPrimitives - 2016.04.28 at 17h 29m 36s.xml">
-      <configuration name="JSONWriterTest.testWriteArrayOfPrimitives" configurationId="JUnit" />
+    <history-entry file="JSONTokenizerTest_deserializeArrayTest - 2016.04.28 at 20h 34m 11s.xml">
+      <configuration name="JSONTokenizerTest.deserializeArrayTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JSONWriterTest_testWriteArrayOfPrimitives - 2016.04.28 at 18h 36m 20s.xml">
-      <configuration name="JSONWriterTest.testWriteArrayOfPrimitives" configurationId="JUnit" />
+    <history-entry file="JSONTokenizerTest_testIndexedProps - 2016.04.29 at 00h 01m 35s.xml">
+      <configuration name="JSONTokenizerTest.testIndexedProps" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JSONWriterTest_writeArrayOfWrappers - 2016.04.28 at 18h 37m 48s.xml">
-      <configuration name="JSONWriterTest.writeArrayOfWrappers" configurationId="JUnit" />
+    <history-entry file="JSONTokenizerTest_testIndexedProps - 2016.04.29 at 00h 02m 11s.xml">
+      <configuration name="JSONTokenizerTest.testIndexedProps" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JSONTokenizerTest_testIndexedProps - 2016.04.29 at 00h 03m 49s.xml">
+      <configuration name="JSONTokenizerTest.testIndexedProps" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JSONTokenizerTest_testIndexedProps - 2016.04.29 at 00h 04m 28s.xml">
+      <configuration name="JSONTokenizerTest.testIndexedProps" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JSONTokenizerTest_testIndexedProps - 2016.04.29 at 00h 08m 05s.xml">
+      <configuration name="JSONTokenizerTest.testIndexedProps" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227047000" />
+    <option name="totallyTimeSpent" value="240835000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1291,25 +1444,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="362" y="0" width="1382" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="369" y="0" width="1554" height="1047" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2251951" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43756345" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67411166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946002" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3390863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.87614214" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65299684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21449487" sideWeight="0.4954955" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6752137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20806243" sideWeight="0.4954955" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6751269" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4253807" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9094017" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1321,7 +1475,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2752137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1398,37 +1551,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tests/jsonbeans/JacksonTest.java</url>
-          <line>53</line>
-          <properties />
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tests/jsonbeans/JSONTokenizerTest.java</url>
-          <line>21</line>
-          <properties />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tests/jsonbeans/JSONTokenizerTest.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tests/jsonbeans/TestClassFactory.java</url>
-          <line>57</line>
-          <properties />
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java</url>
           <line>55</line>
           <properties />
           <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="82" />
+      <option name="time" value="84" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1450,34 +1579,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/XMLEncoderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../libs/gson-2.2.2.jar!/com/google/gson/Gson.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="382" column="17" selection-start-line="382" selection-start-column="17" selection-end-line="382" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/GSONTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/antlr4-4.5.2-1.jar!/org/antlr/v4/runtime/ANTLRInputStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/antlr4-4.5.2-1.jar!/org/antlr/v4/runtime/tree/AbstractParseTreeVisitor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1574,13 +1675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beans/src/beans/Dolphinarium.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/io/StreamTokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -1592,13 +1686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9">
           <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1700,44 +1787,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/jsonbeans/TestSber.java" />
     <entry file="file://$PROJECT_DIR$/src/jsonbeans/TestClassBuilder.java" />
-    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/DolphinsGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/jsonbeans/StreamTokenizerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONDecoderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377">
-          <caret line="181" column="32" selection-start-line="181" selection-start-column="32" selection-end-line="181" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONTokenizerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1768,53 +1821,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONWriterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="74" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beans/src/beans/TestBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/TestClassFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4297#4298#0" expanded="true" />
+            <element signature="e#4355#4356#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONUtil.java">
+    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONWriterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="20" column="74" selection-start-line="20" selection-start-column="74" selection-end-line="20" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="860">
           <caret line="131" column="31" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
           <folding>
             <element signature="e#5151#5152#0" expanded="true" />
@@ -1823,14 +1862,264 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONWriter.java">
+    <entry file="file://$PROJECT_DIR$/beans/src/beans/Dolphinarium.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/DolphinsGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/XMLEncoderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/TestBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/TestStringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beans/src/beans/TestBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beans/src/beans/PrimitivesBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beans/src/beans/ArraysBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding>
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#974#975#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1063#1064#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
+            <element signature="e#1199#1200#0" expanded="true" />
+            <element signature="e#1237#1238#0" expanded="true" />
+            <element signature="e#1272#1273#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1418#1419#0" expanded="true" />
+            <element signature="e#1460#1461#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#1617#1618#0" expanded="true" />
+            <element signature="e#1653#1654#0" expanded="true" />
+            <element signature="e#1689#1690#0" expanded="true" />
+            <element signature="e#1719#1720#0" expanded="true" />
+            <element signature="e#1767#1768#0" expanded="true" />
+            <element signature="e#1805#1806#0" expanded="true" />
+            <element signature="e#1847#1848#0" expanded="true" />
+            <element signature="e#1884#1885#0" expanded="true" />
+            <element signature="e#1938#1939#0" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
+            <element signature="e#2010#2011#0" expanded="true" />
+            <element signature="e#2039#2040#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
+            <element signature="e#2120#2121#0" expanded="true" />
+            <element signature="e#2160#2161#0" expanded="true" />
+            <element signature="e#2196#2197#0" expanded="true" />
+            <element signature="e#2248#2249#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="e#2323#2324#0" expanded="true" />
+            <element signature="e#2354#2355#0" expanded="true" />
+            <element signature="e#2405#2406#0" expanded="true" />
+            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2489#2490#0" expanded="true" />
+            <element signature="e#2527#2528#0" expanded="true" />
+            <element signature="e#2583#2584#0" expanded="true" />
+            <element signature="e#2622#2623#0" expanded="true" />
+            <element signature="e#2654#2655#0" expanded="true" />
+            <element signature="e#2682#2683#0" expanded="true" />
+            <element signature="e#2724#2725#0" expanded="true" />
+            <element signature="e#2758#2759#0" expanded="true" />
+            <element signature="e#2796#2797#0" expanded="true" />
+            <element signature="e#2831#2832#0" expanded="true" />
+            <element signature="e#2881#2882#0" expanded="true" />
+            <element signature="e#2917#2918#0" expanded="true" />
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#2986#2987#0" expanded="true" />
+            <element signature="e#3037#3038#0" expanded="true" />
+            <element signature="e#3077#3078#0" expanded="true" />
+            <element signature="e#3121#3122#0" expanded="true" />
+            <element signature="e#3159#3160#0" expanded="true" />
+            <element signature="e#3215#3216#0" expanded="true" />
+            <element signature="e#3254#3255#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3320#3321#0" expanded="true" />
+            <element signature="e#3368#3369#0" expanded="true" />
+            <element signature="e#3408#3409#0" expanded="true" />
+            <element signature="e#3448#3449#0" expanded="true" />
+            <element signature="e#3486#3487#0" expanded="true" />
+            <element signature="e#3539#3540#0" expanded="true" />
+            <element signature="e#3578#3579#0" expanded="true" />
+            <element signature="e#3615#3616#0" expanded="true" />
+            <element signature="e#3647#3648#0" expanded="true" />
+            <element signature="e#3698#3699#0" expanded="true" />
+            <element signature="e#3740#3741#0" expanded="true" />
+            <element signature="e#3783#3784#0" expanded="true" />
+            <element signature="e#3822#3823#0" expanded="true" />
+            <element signature="e#3877#3878#0" expanded="true" />
+            <element signature="e#3917#3918#0" expanded="true" />
+            <element signature="e#3952#3953#0" expanded="true" />
+            <element signature="e#3983#3984#0" expanded="true" />
+            <element signature="e#4031#4032#0" expanded="true" />
+            <element signature="e#4071#4072#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4150#4151#0" expanded="true" />
+            <element signature="e#4203#4204#0" expanded="true" />
+            <element signature="e#4242#4243#0" expanded="true" />
+            <element signature="e#4281#4282#0" expanded="true" />
+            <element signature="e#4314#4315#0" expanded="true" />
+            <element signature="e#4368#4369#0" expanded="true" />
+            <element signature="e#4412#4413#0" expanded="true" />
+            <element signature="e#4457#4458#0" expanded="true" />
+            <element signature="e#4497#4498#0" expanded="true" />
+            <element signature="e#4554#4555#0" expanded="true" />
+            <element signature="e#4595#4596#0" expanded="true" />
+            <element signature="e#4632#4633#0" expanded="true" />
+            <element signature="e#4664#4665#0" expanded="true" />
+            <element signature="e#4715#4716#0" expanded="true" />
+            <element signature="e#4757#4758#0" expanded="true" />
+            <element signature="e#4800#4801#0" expanded="true" />
+            <element signature="e#4839#4840#0" expanded="true" />
+            <element signature="e#4894#4895#0" expanded="true" />
+            <element signature="e#4934#4935#0" expanded="true" />
+            <element signature="e#4976#4977#0" expanded="true" />
+            <element signature="e#5009#5010#0" expanded="true" />
+            <element signature="e#5066#5067#0" expanded="true" />
+            <element signature="e#5110#5111#0" expanded="true" />
+            <element signature="e#5152#5153#0" expanded="true" />
+            <element signature="e#5192#5193#0" expanded="true" />
+            <element signature="e#5252#5253#0" expanded="true" />
+            <element signature="e#5293#5294#0" expanded="true" />
+            <element signature="e#5334#5335#0" expanded="true" />
+            <element signature="e#5368#5369#0" expanded="true" />
+            <element signature="e#5425#5426#0" expanded="true" />
+            <element signature="e#5471#5472#0" expanded="true" />
+            <element signature="e#5518#5519#0" expanded="true" />
+            <element signature="e#5559#5560#0" expanded="true" />
+            <element signature="e#5618#5619#0" expanded="true" />
+            <element signature="e#5660#5661#0" expanded="true" />
+            <element signature="e#5695#5696#0" expanded="true" />
+            <element signature="e#5725#5726#0" expanded="true" />
+            <element signature="e#5772#5773#0" expanded="true" />
+            <element signature="e#5810#5811#0" expanded="true" />
+            <element signature="e#5851#5852#0" expanded="true" />
+            <element signature="e#5888#5889#0" expanded="true" />
+            <element signature="e#5941#5942#0" expanded="true" />
+            <element signature="e#5979#5980#0" expanded="true" />
+            <element signature="e#6015#6016#0" expanded="true" />
+            <element signature="e#6045#6046#0" expanded="true" />
+            <element signature="e#6093#6094#0" expanded="true" />
+            <element signature="e#6131#6132#0" expanded="true" />
+            <element signature="e#6173#6174#0" expanded="true" />
+            <element signature="e#6210#6211#0" expanded="true" />
+            <element signature="e#6264#6265#0" expanded="true" />
+            <element signature="e#6302#6303#0" expanded="true" />
+            <element signature="e#6340#6341#0" expanded="true" />
+            <element signature="e#6371#6372#0" expanded="true" />
+            <element signature="e#6422#6423#0" expanded="true" />
+            <element signature="e#6462#6463#0" expanded="true" />
+            <element signature="e#6506#6507#0" expanded="true" />
+            <element signature="e#6544#6545#0" expanded="true" />
+            <element signature="e#6600#6601#0" expanded="true" />
+            <element signature="e#6639#6640#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONTokenizerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4297#4298#0" expanded="true" />
-            <element signature="e#4355#4356#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="26" column="58" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONDecoderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7478#7588#1" expanded="true" />
           </folding>
         </state>
       </provider>

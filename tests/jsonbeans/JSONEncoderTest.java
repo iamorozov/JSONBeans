@@ -7,40 +7,21 @@ import org.junit.Assert.*;
 
 public class JSONEncoderTest {
 
+    JSONEncoder jsonEncoder = new JSONEncoder();
+    TestBeanFactory factory = new TestBeanFactory();
+
     @Test
     public void jsonEncoderDolphinariumTest(){
 
-        Dolphinarium dolphinarium = DolphinsGraph.buildDolphinarium();
-
-        JSONEncoder jsonEncoder = new JSONEncoder();
-
-        Assert.assertNotNull(dolphinarium);
+        Dolphinarium dolphinarium = (Dolphinarium)factory.createTestBean("Dolphinarium");
 
         try{
-
-            /*My serializer*/
             jsonEncoder.saveJSON(dolphinarium);
             System.out.println(jsonEncoder.JSONasString());
-
         }
         catch (JSONSerializationException e){
             e.printStackTrace();
         }
 
-    }
-
-    @Test
-    public void jsonEncoderSimpleBeanTest(){
-        String s = TestClassFactory.buildTestJSONString();
-
-        System.out.println(s);
-    }
-
-    @Test
-    public void castingTest(){
-
-        TestBean bean = TestClassFactory.buildTestBean();
-
-        bean.setIntArray(1, 1);
     }
 }

@@ -1,11 +1,5 @@
 package jsonbeans;
 
-
-import beans.Dolphin;
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator;
-import com.sun.org.apache.xalan.internal.xsltc.runtime.Hashtable;
-import com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray;
-
 import java.beans.BeanInfo;
 import java.beans.IndexedPropertyDescriptor;
 import java.beans.IntrospectionException;
@@ -15,6 +9,7 @@ import java.io.Reader;
 import java.io.StreamTokenizer;
 import java.io.StringReader;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,7 +37,7 @@ public class JSONTokenizer {
 
     StreamTokenizer tokenizer;
 
-    private Map reservedSymbols;
+    private Map<Character, Character> reservedSymbols;
 
     private String currentToken;
 
@@ -82,7 +77,7 @@ public class JSONTokenizer {
 
     void initSymbols(){
 
-        reservedSymbols = new HashMap();
+        reservedSymbols = new HashMap<>();
 
         reservedSymbols.put(LEFT_BRACE, LEFT_BRACE);
         reservedSymbols.put(LEFT_BRACKET, LEFT_BRACKET);
@@ -179,7 +174,7 @@ public class JSONTokenizer {
                 if(JSONUtil.primitiveSet.contains(property.getPropertyType()))
                     readPrimitive(property, instance);
                 else if(property instanceof IndexedPropertyDescriptor)
-                    readArray();
+                    readArray((IndexedPropertyDescriptor) property, instance);
                 else
                     property.getWriteMethod().invoke(instance, readObject());
 
@@ -203,7 +198,163 @@ public class JSONTokenizer {
         }
     }
 
-    private void readArray() {
+    private void readArray(IndexedPropertyDescriptor property, Object invoker) throws JSONDeserializationException, InvocationTargetException, IllegalAccessException, ClassNotFoundException {
+        getNextToken();
+
+        if(!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(LEFT_BRACKET))))
+            JSONError("Missing \'[\'", tokenizer.lineno());
+
+        getNextToken();
+
+        if(JSONUtil.primitiveArraysSet.contains(property.getPropertyType())){
+            ArrayList<String> tokensList = new ArrayList<>();
+
+            while (!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(RIGHT_BRACKET)))){
+                tokensList.add(currentToken);
+
+                getNextToken();
+            }
+
+            deserializeArray(property, invoker, tokensList);
+        }
+        else {
+            ArrayList<Object> objects = new ArrayList<>();
+
+            while (!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(RIGHT_BRACKET)))){
+                objects.add(readObject());
+            }
+
+            property.getWriteMethod().invoke(invoker, objects.toArray());
+        }
+    }
+
+    @SuppressWarnings({"Duplicates", "PrimitiveArrayArgumentToVarargsMethod", "ConfusingArgumentToVarargsMethod"})
+    void deserializeArray(IndexedPropertyDescriptor property, Object invoker, ArrayList<String> tokensList) throws InvocationTargetException, IllegalAccessException, ClassNotFoundException {
+
+        Class<?> propertyType = property.getPropertyType();
+        int arrSize = tokensList.size();
+
+        if(propertyType == int[].class){
+            int[] arr = new int[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Integer.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == short[].class){
+            short[] arr = new short[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Short.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == byte[].class){
+            byte[] arr = new byte[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Byte.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == long[].class){
+            long[] arr = new long[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Long.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == double[].class){
+            double[] arr = new double[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Double.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == float[].class){
+            float[] arr = new float[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Float.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == char[].class){
+            char[] arr = new char[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = tokensList.get(i).charAt(0);
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == boolean[].class){
+            boolean[] arr = new boolean[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Boolean.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == Integer[].class){
+            Integer[] arr = new Integer[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Integer.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == Byte[].class){
+            Byte[] arr = new Byte[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Byte.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == Short[].class){
+            Short[] arr = new Short[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Short.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == Long[].class){
+            Long[] arr = new Long[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Long.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == Double[].class){
+            Double[] arr = new Double[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Double.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == Float[].class){
+            Float[] arr = new Float[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Float.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == Character[].class){
+            Character[] arr = new Character[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = tokensList.get(i).charAt(i);
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == Boolean[].class){
+            Boolean[] arr = new Boolean[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Boolean.valueOf(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
+        else if(propertyType == String[].class)
+            property.getWriteMethod().invoke(invoker, tokensList.toArray());
+        else if(propertyType == Class[].class){
+            Class[] arr = new Class[arrSize];
+            for (int i = 0; i < arrSize; i++) {
+                arr[i] = Class.forName(tokensList.get(i));
+            }
+            property.getWriteMethod().invoke(invoker, arr);
+        }
     }
 
     void readPrimitive(PropertyDescriptor property, Object instance)
@@ -221,25 +372,22 @@ public class JSONTokenizer {
             Number value = 0;
 
             if(propertyType == Byte.class || propertyType == byte.class)
-                value = Double.valueOf(currentToken).byteValue();
+                value = Byte.valueOf(currentToken);
 
             else if(propertyType == Short.class || propertyType == short.class)
-                value = Double.valueOf(currentToken).shortValue();
+                value = Short.valueOf(currentToken);
 
             else if(propertyType == Integer.class || propertyType == int.class)
-                value = Double.valueOf(currentToken).intValue();
+                value = Integer.valueOf(currentToken);
 
             else if(propertyType == Long.class || propertyType == long.class)
-                value = Double.valueOf(currentToken).longValue();
-
-            else if(propertyType == Short.class || propertyType == short.class)
-                value = Double.valueOf(currentToken).shortValue();
+                value = Long.valueOf(currentToken);
 
             else if(propertyType == Float.class || propertyType == float.class)
-                value = Double.valueOf(currentToken).floatValue();
+                value = Float.valueOf(currentToken);
 
             else if(propertyType == Double.class || propertyType == double.class)
-                value = Double.valueOf(currentToken).floatValue();
+                value = Double.valueOf(currentToken);
 
             property.getWriteMethod().invoke(instance, value);
         }
