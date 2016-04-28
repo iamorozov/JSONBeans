@@ -1,13 +1,18 @@
 package jsonbeans;
 
 import java.io.StringWriter;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.*;
+
+import static java.util.stream.Collectors.joining;
 
 /**
  * Created by Morozov Ivan on 20.03.2016.
  *
  * Class for writing JSON to string
  */
-class JSONWriter {
+public class JSONWriter {
 
     private static final char LEFT_BRACE = '{';
     private static final char RIGHT_BRACE = '}';
@@ -18,7 +23,7 @@ class JSONWriter {
 
     private StringWriter writer = new StringWriter();
 
-    private JSONWriter(){}
+    JSONWriter(){}
 
     public static JSONWriter getJSONWriter(){
         return new JSONWriter();
@@ -73,6 +78,87 @@ class JSONWriter {
         write(",");
     }
 
+    void writeArrayOfPrimitives(int[] arr){
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            builder.append(arr[i]);
+            if (i != arr.length - 1) builder.append(", ");
+        }
+        write(builder.toString());
+    }
+
+    void writeArrayOfPrimitives(byte[] arr){
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            builder.append(arr[i]);
+            if (i != arr.length - 1) builder.append(", ");
+        }
+        write(builder.toString());
+    }
+
+    void writeArrayOfPrimitives(short[] arr){
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            builder.append(arr[i]);
+            if (i != arr.length - 1) builder.append(", ");
+        }
+        write(builder.toString());
+    }
+
+    void writeArrayOfPrimitives(long[] arr){
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            builder.append(arr[i]);
+            if (i != arr.length - 1) builder.append(", ");
+        }
+        write(builder.toString());
+    }
+
+    void writeArrayOfPrimitives(double[] arr){
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            builder.append(arr[i]);
+            if (i != arr.length - 1) builder.append(", ");
+        }
+        write(builder.toString());
+    }
+
+    void writeArrayOfPrimitives(float[] arr){
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            builder.append(arr[i]);
+            if (i != arr.length - 1) builder.append(", ");
+        }
+        write(builder.toString());
+    }
+
+    void writeArrayOfPrimitives(boolean[] arr){
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            builder.append(arr[i]);
+            if (i != arr.length - 1) builder.append(", ");
+        }
+        write(builder.toString());
+    }
+
+    void writeArrayOfPrimitives(char[] arr){
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            builder.append(arr[i]);
+            if (i != arr.length - 1) builder.append(", ");
+        }
+        write(builder.toString());
+    }
+
+    void writeArrayOfWrappers(Object[] arr){
+        write(getCollectionJoiningWithCommas(arr));
+    }
+
+    String getCollectionJoiningWithCommas(Object[] arr) {
+        return Stream.of(arr)
+                .map(Object::toString)
+                .collect(joining(", "));
+    }
 
     public void writeOpenBrace(){
         write(LEFT_BRACE);

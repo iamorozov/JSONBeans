@@ -2,6 +2,7 @@ package jsonbeans;
 
 
 import java.beans.*;
+import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 /**
@@ -9,7 +10,7 @@ import java.util.*;
  *
  * Class to make JSON from JavaBean class
  */
-public class JSONEncoder {
+class JSONEncoder {
 
     //TODO: Problem with array casting and serializing of non primitive types
     //TODO: Serialize references
@@ -51,12 +52,8 @@ public class JSONEncoder {
 
                     if (!JSONUtil.primitiveSet.contains(property.getPropertyType())){
 
-                        if(property instanceof IndexedPropertyDescriptor){
-
-                            Object[] propsArray = (Object[])property.getReadMethod().invoke(src);
-
-                            saveArrayAsJSON((IndexedPropertyDescriptor)property, propsArray);
-                        }
+                        if(property instanceof IndexedPropertyDescriptor)
+                            saveArrayAsJSON((IndexedPropertyDescriptor) property, src);
                         else {
                             Object obj = property.getReadMethod().invoke(src);
                             if (!serialized.contains(obj) && obj != null){
@@ -80,25 +77,48 @@ public class JSONEncoder {
         }
     }
 
-    private void saveArrayAsJSON(IndexedPropertyDescriptor indexedProp, Object[] objectArray){
+    private void saveArrayAsJSON(IndexedPropertyDescriptor indexedProp, Object invoker) throws InvocationTargetException, IllegalAccessException {
 
         jsonWriter.writeName(indexedProp.getName());
         jsonWriter.writeOpenBracket();
+        Class<?> propertyType = indexedProp.getPropertyType();
 
-        if (JSONUtil.primitiveSet.contains(indexedProp.getPropertyType()))
-            for (int i = 0; i < objectArray.length; i++) {
-                jsonWriter.writeValue(objectArray[i]);
+        if (JSONUtil.primitiveArraysSet.contains(propertyType)) {
+            if (propertyType == int[].class)
+                jsonWriter.writeArrayOfPrimitives((int[])indexedProp.getReadMethod().invoke(invoker));
+            else if (propertyType == short[].class)
+                jsonWriter.writeArrayOfPrimitives((short[])indexedProp.getReadMethod().invoke(invoker));
+            else if (propertyType == byte[].class)
+                jsonWriter.writeArrayOfPrimitives((byte[])indexedProp.getReadMethod().invoke(invoker));
+            else if (propertyType == double[].class)
+                jsonWriter.writeArrayOfPrimitives((double[])indexedProp.getReadMethod().invoke(invoker));
+            else if (propertyType == float[].class)
+                jsonWriter.writeArrayOfPrimitives((float[])indexedProp.getReadMethod().invoke(invoker));
+            else if (propertyType == long[].class)
+                jsonWriter.writeArrayOfPrimitives((long[])indexedProp.getReadMethod().invoke(invoker));
+            else if (propertyType == char[].class)
+                jsonWriter.writeArrayOfPrimitives((char[])indexedProp.getReadMethod().invoke(invoker));
+            else if (propertyType == boolean[].class)
+                jsonWriter.writeArrayOfPrimitives((boolean[])indexedProp.getReadMethod().invoke(invoker));
+            else
+                jsonWriter.writeArrayOfWrappers((Object[])indexedProp.getReadMethod().invoke(invoker));
+        }
+        else{
+            try{
+                Object[] objectArray = (Object[]) indexedProp.getReadMethod().invoke(invoker);
 
-                if(i != objectArray.length - 1) jsonWriter.write(',');
+                for (int i = 0; i < objectArray.length; i++) {
+                    saveObjectAsJSON(objectArray[i]);
+
+                    if(i != objectArray.length - 1) jsonWriter.write(',');
+                }
             }
-        else
-            for (int i = 0; i < objectArray.length; i++) {
-                saveObjectAsJSON(objectArray[i]);
-
-                if(i != objectArray.length - 1) jsonWriter.write(',');
+            catch (Exception e){
+                //TODO:really?
             }
+        }
         jsonWriter.writeCloseBracket();
-        jsonWriter.writeComma();
+        jsonWriter.writeComma();//TODO:??? comma really?
     }
 
     public void saveJSON(Object src)

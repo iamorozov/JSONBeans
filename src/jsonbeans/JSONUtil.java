@@ -21,6 +21,18 @@ class JSONUtil {
             })
     );
 
+    static Set<Class> primitiveArraysSet = new HashSet<>(
+            Arrays.asList(new Class[]{
+                    Integer[].class, Double[].class, Float[].class,
+                    Boolean[].class, String[].class, Class[].class,
+                    Byte[].class, Short[].class, Long[].class,
+                    Character[].class,
+                    int[].class, double[].class,
+                    float[].class, boolean[].class, byte[].class,
+                    short[].class, long[].class, char[].class
+            })
+    );
+
     static Set<Class> numberTypes = new HashSet<>(
             Arrays.asList(new Class[]{
                     Integer.class, Byte.class, Short.class,

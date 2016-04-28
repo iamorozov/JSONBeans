@@ -31,8 +31,16 @@ public class JSONEncoderTest {
 
     @Test
     public void jsonEncoderSimpleBeanTest(){
-        String s = JSONTokenizerTest.buildTestJSONString();
+        String s = TestClassFactory.buildTestJSONString();
 
         System.out.println(s);
+    }
+
+    @Test
+    public void castingTest(){
+
+        TestBean bean = TestClassFactory.buildTestBean();
+
+        bean.setIntArray(1, 1);
     }
 }
