@@ -52,8 +52,10 @@ class JSONEncoder {
 
                     if (!JSONUtil.primitiveSet.contains(property.getPropertyType())){
 
-                        if(property instanceof IndexedPropertyDescriptor)
+                        if(property instanceof IndexedPropertyDescriptor){
                             saveArrayAsJSON((IndexedPropertyDescriptor) property, src);
+                            if(comma) jsonWriter.writeComma();
+                        }
                         else {
                             Object obj = property.getReadMethod().invoke(src);
                             if (!serialized.contains(obj) && obj != null){
@@ -118,7 +120,6 @@ class JSONEncoder {
             }
         }
         jsonWriter.writeCloseBracket();
-        jsonWriter.writeComma();//TODO:??? comma really?
     }
 
     public void saveJSON(Object src)
