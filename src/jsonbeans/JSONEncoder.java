@@ -1,6 +1,5 @@
 package jsonbeans;
 
-
 import java.beans.*;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;

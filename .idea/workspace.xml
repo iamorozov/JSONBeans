@@ -66,11 +66,12 @@
       <file leaf-file-name="JSONEncoder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding>
-                <element signature="e#5106#5107#0" expanded="true" />
-                <element signature="e#5150#5151#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#5105#5106#0" expanded="true" />
+                <element signature="e#5149#5150#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -924,7 +925,7 @@
       <workItem from="1461576293566" duration="3802000" />
       <workItem from="1461610784902" duration="754000" />
       <workItem from="1461836313688" duration="24580000" />
-      <workItem from="1461946370614" duration="4107000" />
+      <workItem from="1461946370614" duration="4143000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1458983381349</created>
@@ -1178,7 +1179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1461968160736</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="JSONEncoder almost final version">
+      <created>1461968200095</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1461968200095</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1214,7 +1222,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245038000" />
+    <option name="totallyTimeSpent" value="245074000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1303,7 +1311,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="JSONEncoder improve" />
     <MESSAGE value="JSONDecoder add two methods&#10;" />
     <MESSAGE value="JSONTokenizer class created" />
     <MESSAGE value="Unit test improve" />
@@ -1328,14 +1335,15 @@
     <MESSAGE value="JSONWriter fixes via chars encoding" />
     <MESSAGE value="JSONWriter final version" />
     <MESSAGE value="JSONEncoder final version" />
-    <option name="LAST_COMMIT_MESSAGE" value="JSONEncoder final version" />
+    <MESSAGE value="JSONEncoder almost final version" />
+    <option name="LAST_COMMIT_MESSAGE" value="JSONEncoder almost final version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java</url>
-          <line>82</line>
+          <line>81</line>
           <properties />
           <option name="timeStamp" value="85" />
         </line-breakpoint>
@@ -1730,11 +1738,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
-            <element signature="e#5106#5107#0" expanded="true" />
-            <element signature="e#5150#5151#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#5105#5106#0" expanded="true" />
+            <element signature="e#5149#5150#0" expanded="true" />
           </folding>
         </state>
       </provider>
