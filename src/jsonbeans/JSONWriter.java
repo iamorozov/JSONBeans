@@ -144,7 +144,9 @@ public class JSONWriter {
     void writeArrayOfPrimitives(char[] arr){
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < arr.length; i++) {
+            builder.append("\"");
             builder.append(arr[i]);
+            builder.append("\"");
             if (i != arr.length - 1) builder.append(", ");
         }
         write(builder.toString());
@@ -156,7 +158,7 @@ public class JSONWriter {
 
     String getCollectionJoiningWithCommas(Object[] arr) {
         return Stream.of(arr)
-                .map(Object::toString)
+                .map(this::getStringValue)
                 .collect(joining(", "));
     }
 

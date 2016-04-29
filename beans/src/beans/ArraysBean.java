@@ -175,7 +175,7 @@ public class ArraysBean extends TestBean{
         this.bytesArr = bytesArr;
     }
 
-    public int getBytesArr(int index){
+    public Byte getBytesArr(int index){
         return bytesArr[index];
     }
 
@@ -255,7 +255,7 @@ public class ArraysBean extends TestBean{
         this.characters = characters;
     }
 
-    public int getCharacters(int index){
+    public Character getCharacters(int index){
         return characters[index];
     }
 
