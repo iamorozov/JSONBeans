@@ -12,16 +12,16 @@ public class JSONEncoderTest {
 
     @Test
     public void jsonEncoderDolphinariumTest(){
+        System.out.println(new TestStringBuilder().DolphinariumJSONString());
+    }
 
-        Dolphinarium dolphinarium = (Dolphinarium)factory.createTestBean("Dolphinarium");
+    @Test
+    public void primitivesEncodingTest(){
+        System.out.println(new TestStringBuilder().PrimitiveBeanJSONString());
+    }
 
-        try{
-            jsonEncoder.saveJSON(dolphinarium);
-            System.out.println(jsonEncoder.JSONasString());
-        }
-        catch (JSONSerializationException e){
-            e.printStackTrace();
-        }
-
+    @Test
+    public void arraysEncodingTest(){
+        System.out.println(new TestStringBuilder().ArraysBeanJSONString());
     }
 }

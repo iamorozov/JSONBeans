@@ -35,7 +35,7 @@ public class JSONWriter {
         else if(value instanceof Class)
             return "\"" + value.toString().substring(6) + "\"";
         else
-            return value instanceof String ? "\"" + value.toString() + "\"" : value.toString();
+            return (value instanceof String || value instanceof Character) ? "\"" + value.toString() + "\"" : value.toString();
     }
 
     public void write(String toAppend){
