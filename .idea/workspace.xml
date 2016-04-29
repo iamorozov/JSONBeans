@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JSON_Beans_jar/JSON Beans.jar" afterPath="$PROJECT_DIR$/out/artifacts/JSON_Beans_jar/JSON Beans.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java" afterPath="$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java" />
     </list>
     <ignored path="JSON Beans.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +32,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JSONEncoderTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JSONEncoderTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -64,14 +63,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JSONEncoder.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JSONEncoder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
+            <state relative-caret-position="204">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
-                <element signature="e#5184#5185#0" expanded="true" />
-                <element signature="e#5228#5229#0" expanded="true" />
+                <element signature="e#5106#5107#0" expanded="true" />
+                <element signature="e#5150#5151#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,8 +183,8 @@
         <option value="$PROJECT_DIR$/beans/src/beans/ArraysBean.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/TestBeanFactory.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONWriter.java" />
-        <option value="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java" />
+        <option value="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" />
       </list>
     </option>
   </component>
@@ -925,7 +924,7 @@
       <workItem from="1461576293566" duration="3802000" />
       <workItem from="1461610784902" duration="754000" />
       <workItem from="1461836313688" duration="24580000" />
-      <workItem from="1461946370614" duration="4064000" />
+      <workItem from="1461946370614" duration="4107000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1458983381349</created>
@@ -1172,7 +1171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1461967810983</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="JSONEncoder final version">
+      <created>1461968160736</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1461968160736</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1208,7 +1214,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244995000" />
+    <option name="totallyTimeSpent" value="245038000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1297,7 +1303,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Test improve" />
     <MESSAGE value="JSONEncoder improve" />
     <MESSAGE value="JSONDecoder add two methods&#10;" />
     <MESSAGE value="JSONTokenizer class created" />
@@ -1322,14 +1327,15 @@
     <MESSAGE value="JSONTokenizer completed&#10;Some test classes fixes" />
     <MESSAGE value="JSONWriter fixes via chars encoding" />
     <MESSAGE value="JSONWriter final version" />
-    <option name="LAST_COMMIT_MESSAGE" value="JSONWriter final version" />
+    <MESSAGE value="JSONEncoder final version" />
+    <option name="LAST_COMMIT_MESSAGE" value="JSONEncoder final version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java</url>
-          <line>83</line>
+          <line>82</line>
           <properties />
           <option name="timeStamp" value="85" />
         </line-breakpoint>
@@ -1695,17 +1701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
-          <folding>
-            <element signature="e#5184#5185#0" expanded="true" />
-            <element signature="e#5228#5229#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -1729,6 +1724,17 @@
             <element signature="e#456#457#0" expanded="true" />
             <element signature="e#505#506#0" expanded="true" />
             <element signature="e#587#588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#5106#5107#0" expanded="true" />
+            <element signature="e#5150#5151#0" expanded="true" />
           </folding>
         </state>
       </provider>

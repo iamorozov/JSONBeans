@@ -12,7 +12,6 @@ import java.util.*;
  */
 class JSONEncoder {
 
-    //TODO: Problem with array casting and serializing of non primitive types
     //TODO: Serialize references
     //TODO: Manage exceptions
     //TODO: Refactoring
