@@ -237,28 +237,28 @@ public class JSONTokenizer {
         if(propertyType == int[].class){
             int[] arr = new int[arrSize];
             for (int i = 0; i < arrSize; i++) {
-                arr[i] = Integer.valueOf(tokensList.get(i));
+                arr[i] = Double.valueOf(tokensList.get(i)).intValue();
             }
             property.getWriteMethod().invoke(invoker, arr);
         }
         else if(propertyType == short[].class){
             short[] arr = new short[arrSize];
             for (int i = 0; i < arrSize; i++) {
-                arr[i] = Short.valueOf(tokensList.get(i));
+                arr[i] = Double.valueOf(tokensList.get(i)).shortValue();
             }
             property.getWriteMethod().invoke(invoker, arr);
         }
         else if(propertyType == byte[].class){
             byte[] arr = new byte[arrSize];
             for (int i = 0; i < arrSize; i++) {
-                arr[i] = Byte.valueOf(tokensList.get(i));
+                arr[i] = Double.valueOf(tokensList.get(i)).byteValue();
             }
             property.getWriteMethod().invoke(invoker, arr);
         }
         else if(propertyType == long[].class){
             long[] arr = new long[arrSize];
             for (int i = 0; i < arrSize; i++) {
-                arr[i] = Long.valueOf(tokensList.get(i));
+                arr[i] = Double.valueOf(tokensList.get(i)).longValue();
             }
             property.getWriteMethod().invoke(invoker, arr);
         }
@@ -272,7 +272,7 @@ public class JSONTokenizer {
         else if(propertyType == float[].class){
             float[] arr = new float[arrSize];
             for (int i = 0; i < arrSize; i++) {
-                arr[i] = Float.valueOf(tokensList.get(i));
+                arr[i] = Double.valueOf(tokensList.get(i)).floatValue();
             }
             property.getWriteMethod().invoke(invoker, arr);
         }
@@ -293,28 +293,28 @@ public class JSONTokenizer {
         else if(propertyType == Integer[].class){
             Integer[] arr = new Integer[arrSize];
             for (int i = 0; i < arrSize; i++) {
-                arr[i] = Integer.valueOf(tokensList.get(i));
+                arr[i] = Double.valueOf(tokensList.get(i)).intValue();
             }
             property.getWriteMethod().invoke(invoker, arr);
         }
         else if(propertyType == Byte[].class){
             Byte[] arr = new Byte[arrSize];
             for (int i = 0; i < arrSize; i++) {
-                arr[i] = Byte.valueOf(tokensList.get(i));
+                arr[i] = Double.valueOf(tokensList.get(i)).byteValue();
             }
             property.getWriteMethod().invoke(invoker, arr);
         }
         else if(propertyType == Short[].class){
             Short[] arr = new Short[arrSize];
             for (int i = 0; i < arrSize; i++) {
-                arr[i] = Short.valueOf(tokensList.get(i));
+                arr[i] = Double.valueOf(tokensList.get(i)).shortValue();
             }
             property.getWriteMethod().invoke(invoker, arr);
         }
         else if(propertyType == Long[].class){
             Long[] arr = new Long[arrSize];
             for (int i = 0; i < arrSize; i++) {
-                arr[i] = Long.valueOf(tokensList.get(i));
+                arr[i] = Double.valueOf(tokensList.get(i)).longValue();
             }
             property.getWriteMethod().invoke(invoker, arr);
         }
@@ -328,7 +328,7 @@ public class JSONTokenizer {
         else if(propertyType == Float[].class){
             Float[] arr = new Float[arrSize];
             for (int i = 0; i < arrSize; i++) {
-                arr[i] = Float.valueOf(tokensList.get(i));
+                arr[i] = Double.valueOf(tokensList.get(i)).floatValue();
             }
             property.getWriteMethod().invoke(invoker, arr);
         }
@@ -372,19 +372,19 @@ public class JSONTokenizer {
             Number value = 0;
 
             if(propertyType == Byte.class || propertyType == byte.class)
-                value = Byte.valueOf(currentToken);
+                value = Double.valueOf(currentToken).byteValue();
 
             else if(propertyType == Short.class || propertyType == short.class)
-                value = Short.valueOf(currentToken);
+                value = Double.valueOf(currentToken).shortValue();
 
             else if(propertyType == Integer.class || propertyType == int.class)
-                value = Integer.valueOf(currentToken);
+                value = Double.valueOf(currentToken).intValue();
 
             else if(propertyType == Long.class || propertyType == long.class)
-                value = Long.valueOf(currentToken);
+                value = Double.valueOf(currentToken).longValue();
 
             else if(propertyType == Float.class || propertyType == float.class)
-                value = Float.valueOf(currentToken);
+                value = Double.valueOf(currentToken).floatValue();
 
             else if(propertyType == Double.class || propertyType == double.class)
                 value = Double.valueOf(currentToken);
