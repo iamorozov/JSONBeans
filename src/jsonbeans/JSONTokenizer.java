@@ -8,8 +8,10 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.StreamTokenizer;
 import java.io.StringReader;
+import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,11 +45,12 @@ public class JSONTokenizer {
 
     private int tokenType;
 
-    JSONTokenizer(String jsonString){
+    JSONTokenizer(String jsonString)throws JSONDeserializationException{
 
         StringReader stringReader = new StringReader(jsonString);
         try{
             initializeTokenizer(stringReader);
+            getNextToken();
         }
         catch (IOException e){
             //TODO: manage exceptions
@@ -126,8 +129,6 @@ public class JSONTokenizer {
 
     Object readObject()throws JSONDeserializationException{
 
-        getNextToken();
-
         if(!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(LEFT_BRACE))))
             JSONError("Missing \'{\'", tokenizer.lineno());
 
@@ -198,12 +199,11 @@ public class JSONTokenizer {
         }
     }
 
-    private void readArray(IndexedPropertyDescriptor property, Object invoker) throws JSONDeserializationException, InvocationTargetException, IllegalAccessException, ClassNotFoundException {
+    private void readArray(IndexedPropertyDescriptor property, Object invoker) throws JSONDeserializationException, InvocationTargetException, IllegalAccessException, ClassNotFoundException, InstantiationException {
         getNextToken();
 
         if(!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(LEFT_BRACKET))))
             JSONError("Missing \'[\'", tokenizer.lineno());
-
         getNextToken();
 
         if(JSONUtil.primitiveArraysSet.contains(property.getPropertyType())){
@@ -221,10 +221,17 @@ public class JSONTokenizer {
             ArrayList<Object> objects = new ArrayList<>();
 
             while (!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(RIGHT_BRACKET)))){
-                objects.add(readObject());
+                objects.add(property.getIndexedPropertyType().cast(readObject()));
+                getNextToken();
             }
 
-            property.getWriteMethod().invoke(invoker, objects.toArray());
+            Object[] arr = (Object[]) Array.newInstance(property.getIndexedPropertyType(), objects.size());
+
+            for (int i = 0; i < objects.size(); i++) {
+                arr[i] = objects.get(i);
+            }
+
+            property.getWriteMethod().invoke(invoker, (Object)arr);
         }
     }
 
@@ -295,65 +302,70 @@ public class JSONTokenizer {
             for (int i = 0; i < arrSize; i++) {
                 arr[i] = Double.valueOf(tokensList.get(i)).intValue();
             }
-            property.getWriteMethod().invoke(invoker, arr);
+            property.getWriteMethod().invoke(invoker, (Object) arr);
         }
         else if(propertyType == Byte[].class){
             Byte[] arr = new Byte[arrSize];
             for (int i = 0; i < arrSize; i++) {
                 arr[i] = Double.valueOf(tokensList.get(i)).byteValue();
             }
-            property.getWriteMethod().invoke(invoker, arr);
+            property.getWriteMethod().invoke(invoker, (Object) arr);
         }
         else if(propertyType == Short[].class){
             Short[] arr = new Short[arrSize];
             for (int i = 0; i < arrSize; i++) {
                 arr[i] = Double.valueOf(tokensList.get(i)).shortValue();
             }
-            property.getWriteMethod().invoke(invoker, arr);
+            property.getWriteMethod().invoke(invoker, (Object) arr);
         }
         else if(propertyType == Long[].class){
             Long[] arr = new Long[arrSize];
             for (int i = 0; i < arrSize; i++) {
                 arr[i] = Double.valueOf(tokensList.get(i)).longValue();
             }
-            property.getWriteMethod().invoke(invoker, arr);
+            property.getWriteMethod().invoke(invoker, (Object) arr);
         }
         else if(propertyType == Double[].class){
             Double[] arr = new Double[arrSize];
             for (int i = 0; i < arrSize; i++) {
                 arr[i] = Double.valueOf(tokensList.get(i));
             }
-            property.getWriteMethod().invoke(invoker, arr);
+            property.getWriteMethod().invoke(invoker, (Object) arr);
         }
         else if(propertyType == Float[].class){
             Float[] arr = new Float[arrSize];
             for (int i = 0; i < arrSize; i++) {
                 arr[i] = Double.valueOf(tokensList.get(i)).floatValue();
             }
-            property.getWriteMethod().invoke(invoker, arr);
+            property.getWriteMethod().invoke(invoker, (Object) arr);
         }
         else if(propertyType == Character[].class){
             Character[] arr = new Character[arrSize];
             for (int i = 0; i < arrSize; i++) {
-                arr[i] = tokensList.get(i).charAt(i);
+                arr[i] = tokensList.get(i).charAt(0);
             }
-            property.getWriteMethod().invoke(invoker, arr);
+            property.getWriteMethod().invoke(invoker, (Object) arr);
         }
         else if(propertyType == Boolean[].class){
             Boolean[] arr = new Boolean[arrSize];
             for (int i = 0; i < arrSize; i++) {
                 arr[i] = Boolean.valueOf(tokensList.get(i));
             }
-            property.getWriteMethod().invoke(invoker, arr);
+            property.getWriteMethod().invoke(invoker, (Object) arr);
         }
-        else if(propertyType == String[].class)
-            property.getWriteMethod().invoke(invoker, tokensList.toArray());
+        else if(propertyType == String[].class){
+            String[] arr = (String[]) Array.newInstance(String.class, tokensList.size());
+            for (int i = 0; i < tokensList.size(); i++) {
+                arr[i] = tokensList.get(i);
+            }
+            property.getWriteMethod().invoke(invoker, (Object)arr);
+        }
         else if(propertyType == Class[].class){
             Class[] arr = new Class[arrSize];
             for (int i = 0; i < arrSize; i++) {
                 arr[i] = Class.forName(tokensList.get(i));
             }
-            property.getWriteMethod().invoke(invoker, arr);
+            property.getWriteMethod().invoke(invoker, (Object) arr);
         }
     }
 
