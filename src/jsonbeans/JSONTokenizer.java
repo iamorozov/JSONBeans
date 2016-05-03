@@ -73,9 +73,6 @@ public class JSONTokenizer {
         tokenizer.ordinaryChar(COLON);
 
         initSymbols();
-//
-//        if(hasMoreTokens())
-//            tokenizer.nextToken();
     }
 
     void initSymbols(){
