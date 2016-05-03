@@ -64,7 +64,7 @@ public class JSONTokenizer {
         tokenizer.parseNumbers();
 
         tokenizer.whitespaceChars(COMMA, COMMA);
-        tokenizer.whitespaceChars(QUOTE, QUOTE);
+        tokenizer.quoteChar(QUOTE);
 
         tokenizer.ordinaryChar(LEFT_BRACE);
         tokenizer.ordinaryChar(RIGHT_BRACE);
@@ -73,9 +73,9 @@ public class JSONTokenizer {
         tokenizer.ordinaryChar(COLON);
 
         initSymbols();
-
-        if(hasMoreTokens())
-            tokenizer.nextToken();
+//
+//        if(hasMoreTokens())
+//            tokenizer.nextToken();
     }
 
     void initSymbols(){
@@ -91,36 +91,37 @@ public class JSONTokenizer {
         reservedSymbols.put(QUOTE, QUOTE);
     }
 
-    void getNextToken() throws JSONDeserializationException{
-        if(!hasMoreTokens())
-            JSONError("Unexpected end of file", tokenizer.lineno());
+    void getNextToken() throws JSONDeserializationException {
+        if (!hasMoreTokens()) JSONError("Unexpected end of file", tokenizer.lineno());
 
-        try{
-            switch (tokenizer.ttype){
-                case StreamTokenizer.TT_NUMBER:
-                    tokenType = TYPE_INT_CONST;
-                    currentToken = String.valueOf(tokenizer.nval);
-                    break;
-                case StreamTokenizer.TT_WORD:
-                    tokenType = TYPE_IDENTIFIER;
-                    currentToken = tokenizer.sval;
-                    break;
-                default:
-                    char charToken = (char)tokenizer.ttype;
-                    if(reservedSymbols.containsValue(charToken)){
-                        tokenType = TYPE_SYMBOL;
-                        currentToken = String.valueOf(charToken);
-                        break;
-                    }
-                    else {
-                        JSONError("Unexpected token: " + charToken, tokenizer.lineno());
-                    }
-            }
-
+        try {
             tokenizer.nextToken();
+        } catch (IOException e) {
+            JSONError("Something went wrong", tokenizer.lineno());
         }
-        catch (IOException e){
-            //TODO: manage exceptions
+
+        switch (tokenizer.ttype) {
+            case StreamTokenizer.TT_NUMBER:
+                tokenType = TYPE_INT_CONST;
+                currentToken = String.valueOf(tokenizer.nval);
+                break;
+            case StreamTokenizer.TT_WORD:
+                tokenType = TYPE_IDENTIFIER;
+                currentToken = tokenizer.sval;
+                break;
+            case (int)QUOTE:
+                tokenType = TYPE_IDENTIFIER;
+                currentToken = tokenizer.sval;
+                break;
+            default:
+                char charToken = (char) tokenizer.ttype;
+                if (reservedSymbols.containsValue(charToken)) {
+                    tokenType = TYPE_SYMBOL;
+                    currentToken = String.valueOf(charToken);
+                    break;
+                } else {
+                    JSONError("Unexpected token: " + charToken, tokenizer.lineno());
+                }
         }
     }
 
@@ -176,8 +177,10 @@ public class JSONTokenizer {
                     readPrimitive(property, instance);
                 else if(property instanceof IndexedPropertyDescriptor)
                     readArray((IndexedPropertyDescriptor) property, instance);
-                else
+                else{
+                    getNextToken();
                     property.getWriteMethod().invoke(instance, readObject());
+                }
 
 
                 getNextToken();
