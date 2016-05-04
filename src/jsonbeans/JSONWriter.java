@@ -1,9 +1,7 @@
 package jsonbeans;
 
 import java.io.StringWriter;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.*;
+import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.joining;
 
@@ -12,7 +10,7 @@ import static java.util.stream.Collectors.joining;
  *
  * Class for writing JSON to string
  */
-public class JSONWriter {
+class JSONWriter {
 
     private static final char LEFT_BRACE = '{';
     private static final char RIGHT_BRACE = '}';
