@@ -44,14 +44,13 @@ public class JSONTokenizer {
 
     private int tokenType;
 
-    JSONTokenizer(String jsonString)throws JSONDeserializationException{
+    JSONTokenizer(String jsonString) throws JSONDeserializationException {
 
         StringReader stringReader = new StringReader(jsonString);
         try{
             initializeTokenizer(stringReader);
             getNextToken();
-        }
-        catch (IOException e){
+        } catch (IOException | JSONDeserializationException e) {
             JSONError("Intialization problem", 0);
         }
     }
