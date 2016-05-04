@@ -1,15 +1,21 @@
 package jsonbeans;
 
-import java.beans.*;
+import java.beans.BeanInfo;
+import java.beans.IndexedPropertyDescriptor;
+import java.beans.Introspector;
+import java.beans.PropertyDescriptor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Set;
 
 /**
  * Created by Morozov Ivan on 07.03.2016.
  *
  * Class to make JSON from JavaBean class
  */
-class JSONEncoder {
+public class JSONEncoder {
 
     //TODO: Serialize references
     //TODO: Manage exceptions
