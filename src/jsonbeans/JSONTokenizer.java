@@ -23,18 +23,18 @@ import java.util.Map;
 public class JSONTokenizer {
 
     // Token types
-    public static final int TYPE_INT_CONST   = 1;
-    public static final int TYPE_SYMBOL      = 2;
-    public static final int TYPE_IDENTIFIER  = 3;
+    private static final int TYPE_INT_CONST = 1;
+    private static final int TYPE_SYMBOL = 2;
+    private static final int TYPE_IDENTIFIER = 3;
 
-    public static final char LEFT_BRACE = '{';
-    public static final char RIGHT_BRACE = '}';
-    public static final char LEFT_BRACKET = '[';
-    public static final char RIGHT_BRACKET = ']';
-    public static final char COLON = ':';
-    public static final char COMMA = ',';
-    public static final char QUOTE   = '\"';
-    public static final String KW_CLASS = "class";
+    private static final char LEFT_BRACE = '{';
+    private static final char RIGHT_BRACE = '}';
+    private static final char LEFT_BRACKET = '[';
+    private static final char RIGHT_BRACKET = ']';
+    private static final char COLON = ':';
+    private static final char COMMA = ',';
+    private static final char QUOTE = '\"';
+    private static final String KW_CLASS = "class";
 
     StreamTokenizer tokenizer;
 
@@ -73,7 +73,7 @@ public class JSONTokenizer {
         initSymbols();
     }
 
-    void initSymbols(){
+    private void initSymbols() {
 
         reservedSymbols = new HashMap<>();
 
@@ -86,7 +86,7 @@ public class JSONTokenizer {
         reservedSymbols.put(QUOTE, QUOTE);
     }
 
-    void getNextToken() throws JSONDeserializationException {
+    private void getNextToken() throws JSONDeserializationException {
         if (!hasMoreTokens()) JSONError("Unexpected end of file", tokenizer.lineno());
 
         try {
@@ -120,7 +120,9 @@ public class JSONTokenizer {
         }
     }
 
-    boolean hasMoreTokens(){return tokenizer.ttype != StreamTokenizer.TT_EOF;}
+    private boolean hasMoreTokens() {
+        return tokenizer.ttype != StreamTokenizer.TT_EOF;
+    }
 
 
     Object readObject()throws JSONDeserializationException{
@@ -197,7 +199,7 @@ public class JSONTokenizer {
         }
     }
 
-    private void readArray(IndexedPropertyDescriptor property, Object invoker) throws JSONDeserializationException, InvocationTargetException, IllegalAccessException, ClassNotFoundException, InstantiationException {
+    void readArray(IndexedPropertyDescriptor property, Object invoker) throws JSONDeserializationException, InvocationTargetException, IllegalAccessException, ClassNotFoundException, InstantiationException {
         getNextToken();
 
         if(!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(LEFT_BRACKET))))
@@ -413,7 +415,7 @@ public class JSONTokenizer {
             property.getWriteMethod().invoke(instance, Class.forName(currentToken));
     }
 
-    Map<String, PropertyDescriptor> getPropertyMap(PropertyDescriptor[] descriptors){
+    private Map<String, PropertyDescriptor> getPropertyMap(PropertyDescriptor[] descriptors) {
 
         HashMap<String, PropertyDescriptor> propertyDescriptorHashMap = new HashMap<>();
 
@@ -424,7 +426,7 @@ public class JSONTokenizer {
         return propertyDescriptorHashMap;
     }
 
-    public void JSONError(String message, int line)throws JSONDeserializationException{
+    private void JSONError(String message, int line) throws JSONDeserializationException {
         throw new JSONDeserializationException(message, line);
     }
 
