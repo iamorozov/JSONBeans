@@ -7,18 +7,21 @@ package jsonbeans;
  */
 public class JSONDecoder{
 
-    String jsonString;
-    Class desClass;
+    private JSONTokenizer tokenizer;
 
-    JSONDecoder(String jsonString, Class classOfDeserialization){
-        this.jsonString = jsonString;
-        desClass = classOfDeserialization;
+    /**
+     * @param jsonString - A string with JSON representation of object
+     * @throws JSONDeserializationException
+     */
+    public JSONDecoder(String jsonString) throws JSONDeserializationException {
+        tokenizer = new JSONTokenizer(jsonString);
     }
 
-    public Object readJSON()
-            throws JSONDeserializationException{
-
-
-        return null;
+    /**
+     * @return deserialized object
+     * @throws JSONDeserializationException
+     */
+    public Object readJSON() throws JSONDeserializationException {
+        return tokenizer.readObject();
     }
 }
