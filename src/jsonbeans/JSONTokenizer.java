@@ -11,7 +11,6 @@ import java.io.StringReader;
 import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -53,7 +52,7 @@ public class JSONTokenizer {
             getNextToken();
         }
         catch (IOException e){
-            //TODO: manage exceptions
+            JSONError("Intialization problem", 0);
         }
     }
 
