@@ -49,32 +49,33 @@ public class JSONEncoder {
                 String propertyName;
 
                 for (PropertyDescriptor property: properties) {
+                    try {
+                        if (property == properties.getLast()) comma = false;
 
-                    if (property == properties.getLast())
-                        comma = false;
+                        propertyName = property.getName();
+                        Method readMethod = property.getReadMethod();
 
-                    propertyName = property.getName();
-                    Method readMethod = property.getReadMethod();
+                        if (!JSONUtil.primitiveSet.contains(property.getPropertyType())) {
 
-                    if (!JSONUtil.primitiveSet.contains(property.getPropertyType())){
+                            if (property instanceof IndexedPropertyDescriptor) {
+                                saveArrayAsJSON((IndexedPropertyDescriptor) property, src);
+                                if (comma) jsonWriter.writeComma();
+                            } else {
+                                if (readMethod != null) {
+                                    Object obj = readMethod.invoke(src);
 
-                        if(property instanceof IndexedPropertyDescriptor){
-                            saveArrayAsJSON((IndexedPropertyDescriptor) property, src);
-                            if(comma) jsonWriter.writeComma();
-                        }
-                        else {
-                            if (readMethod != null) {
-                                Object obj = readMethod.invoke(src);
-
-                                if (!serialized.contains(obj) && obj != null) {
-                                    jsonWriter.writeName(propertyName);
-                                    saveObjectAsJSON(obj);
-                                    if (comma) jsonWriter.writeComma();
+                                    if (!serialized.contains(obj) && obj != null) {
+                                        jsonWriter.writeName(propertyName);
+                                        saveObjectAsJSON(obj);
+                                        if (comma) jsonWriter.writeComma();
+                                    }
                                 }
                             }
-                        }
+                        } else if (readMethod != null)
+                            jsonWriter.writePair(propertyName, readMethod.invoke(src), comma);
+                    } catch (Exception e) {
+                        //ignore exceptions
                     }
-                    else if (readMethod != null) jsonWriter.writePair(propertyName, readMethod.invoke(src), comma);
                 }
 
                 jsonWriter.writeCloseBrace();
