@@ -74,7 +74,7 @@ public class JSONEncoder {
                         } else if (readMethod != null)
                             jsonWriter.writePair(propertyName, readMethod.invoke(src), comma);
                     } catch (Exception e) {
-                        //ignore exceptions
+                        jsonWriter.writeDefaultValue(property, comma);
                     }
                 }
 
