@@ -172,6 +172,8 @@ class JSONWriter {
             writePair(property.getName(), 0, comma);
         } else if (JSONUtil.characterSequenceTypes.contains(type)) {
             writePair(property.getName(), "", comma);
+        } else if (JSONUtil.logicalTypes.contains(type)) {
+            writePair(property.getName(), false, comma);
         } else writePair(property.getName(), null, comma);
     }
 
