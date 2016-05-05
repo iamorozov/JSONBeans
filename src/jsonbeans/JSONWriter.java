@@ -1,5 +1,6 @@
 package jsonbeans;
 
+import java.beans.PropertyDescriptor;
 import java.io.StringWriter;
 import java.util.stream.Stream;
 
@@ -162,6 +163,16 @@ class JSONWriter {
         return Stream.of(arr)
                 .map(this::getStringValue)
                 .collect(joining(", "));
+    }
+
+    void writeDefaultValue(PropertyDescriptor property, boolean comma) {
+        Class<?> type = property.getPropertyType();
+
+        if (JSONUtil.numberTypes.contains(type)) {
+            writePair(property.getName(), 0, comma);
+        } else if (JSONUtil.characterSequenceTypes.contains(type)) {
+            writePair(property.getName(), "", comma);
+        } else writePair(property.getName(), null, comma);
     }
 
     public void writeOpenBrace(){
