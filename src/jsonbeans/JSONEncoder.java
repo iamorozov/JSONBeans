@@ -5,6 +5,7 @@ import java.beans.IndexedPropertyDescriptor;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -53,6 +54,7 @@ public class JSONEncoder {
                         comma = false;
 
                     propertyName = property.getName();
+                    Method readMethod = property.getReadMethod();
 
                     if (!JSONUtil.primitiveSet.contains(property.getPropertyType())){
 
@@ -61,17 +63,18 @@ public class JSONEncoder {
                             if(comma) jsonWriter.writeComma();
                         }
                         else {
-                            Object obj = property.getReadMethod().invoke(src);
-                            if (!serialized.contains(obj) && obj != null){
-                                jsonWriter.writeName(propertyName);
-                                saveObjectAsJSON(obj);
-                                if(comma)
-                                    jsonWriter.writeComma();
+                            if (readMethod != null) {
+                                Object obj = readMethod.invoke(src);
+
+                                if (!serialized.contains(obj) && obj != null) {
+                                    jsonWriter.writeName(propertyName);
+                                    saveObjectAsJSON(obj);
+                                    if (comma) jsonWriter.writeComma();
+                                }
                             }
                         }
                     }
-                    else
-                        jsonWriter.writePair(propertyName, property.getReadMethod().invoke(src), comma);
+                    else if (readMethod != null) jsonWriter.writePair(propertyName, readMethod.invoke(src), comma);
                 }
 
                 jsonWriter.writeCloseBrace();
@@ -88,41 +91,41 @@ public class JSONEncoder {
         jsonWriter.writeName(indexedProp.getName());
         jsonWriter.writeOpenBracket();
         Class<?> propertyType = indexedProp.getPropertyType();
+        Method readMethod = indexedProp.getReadMethod();
 
-        if (JSONUtil.primitiveArraysSet.contains(propertyType)) {
-            if (propertyType == int[].class)
-                jsonWriter.writeArrayOfPrimitives((int[])indexedProp.getReadMethod().invoke(invoker));
-            else if (propertyType == short[].class)
-                jsonWriter.writeArrayOfPrimitives((short[])indexedProp.getReadMethod().invoke(invoker));
-            else if (propertyType == byte[].class)
-                jsonWriter.writeArrayOfPrimitives((byte[])indexedProp.getReadMethod().invoke(invoker));
-            else if (propertyType == double[].class)
-                jsonWriter.writeArrayOfPrimitives((double[])indexedProp.getReadMethod().invoke(invoker));
-            else if (propertyType == float[].class)
-                jsonWriter.writeArrayOfPrimitives((float[])indexedProp.getReadMethod().invoke(invoker));
-            else if (propertyType == long[].class)
-                jsonWriter.writeArrayOfPrimitives((long[])indexedProp.getReadMethod().invoke(invoker));
-            else if (propertyType == char[].class)
-                jsonWriter.writeArrayOfPrimitives((char[])indexedProp.getReadMethod().invoke(invoker));
-            else if (propertyType == boolean[].class)
-                jsonWriter.writeArrayOfPrimitives((boolean[])indexedProp.getReadMethod().invoke(invoker));
-            else
-                jsonWriter.writeArrayOfWrappers((Object[])indexedProp.getReadMethod().invoke(invoker));
-        }
-        else{
-            try{
-                Object[] objectArray = (Object[]) indexedProp.getReadMethod().invoke(invoker);
+        if (readMethod != null) {
+            if (JSONUtil.primitiveArraysSet.contains(propertyType)) {
+                if (propertyType == int[].class) jsonWriter.writeArrayOfPrimitives((int[]) readMethod.invoke(invoker));
+                else if (propertyType == short[].class)
+                    jsonWriter.writeArrayOfPrimitives((short[]) readMethod.invoke(invoker));
+                else if (propertyType == byte[].class)
+                    jsonWriter.writeArrayOfPrimitives((byte[]) readMethod.invoke(invoker));
+                else if (propertyType == double[].class)
+                    jsonWriter.writeArrayOfPrimitives((double[]) readMethod.invoke(invoker));
+                else if (propertyType == float[].class)
+                    jsonWriter.writeArrayOfPrimitives((float[]) readMethod.invoke(invoker));
+                else if (propertyType == long[].class)
+                    jsonWriter.writeArrayOfPrimitives((long[]) readMethod.invoke(invoker));
+                else if (propertyType == char[].class)
+                    jsonWriter.writeArrayOfPrimitives((char[]) readMethod.invoke(invoker));
+                else if (propertyType == boolean[].class)
+                    jsonWriter.writeArrayOfPrimitives((boolean[]) readMethod.invoke(invoker));
+                else jsonWriter.writeArrayOfWrappers((Object[]) readMethod.invoke(invoker));
+            } else {
+                try {
+                    Object[] objectArray = (Object[]) readMethod.invoke(invoker);
 
-                for (int i = 0; i < objectArray.length; i++) {
-                    saveObjectAsJSON(objectArray[i]);
+                    for (int i = 0; i < objectArray.length; i++) {
+                        saveObjectAsJSON(objectArray[i]);
 
-                    if(i != objectArray.length - 1) jsonWriter.write(',');
+                        if (i != objectArray.length - 1) jsonWriter.write(',');
+                    }
+                } catch (Exception e) {
+                    //TODO:really?
                 }
             }
-            catch (Exception e){
-                //TODO:really?
-            }
         }
+
         jsonWriter.writeCloseBracket();
     }
 
