@@ -154,6 +154,10 @@ class JSONWriter {
         write(getCollectionJoiningWithCommas(arr));
     }
 
+    /**
+     * @param arr - an array, whose elements should be joined
+     * @return - String representation of array's elements, joined with commas
+     */
     String getCollectionJoiningWithCommas(Object[] arr) {
         return Stream.of(arr)
                 .map(this::getStringValue)
