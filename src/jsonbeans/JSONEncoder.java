@@ -61,17 +61,15 @@ public class JSONEncoder {
                                 saveArrayAsJSON((IndexedPropertyDescriptor) property, src);
                                 if (comma) jsonWriter.writeComma();
                             } else {
-                                if (readMethod != null) {
-                                    Object obj = readMethod.invoke(src);
-
-                                    if (!serialized.contains(obj) && obj != null) {
-                                        jsonWriter.writeName(propertyName);
-                                        saveObjectAsJSON(obj);
-                                        if (comma) jsonWriter.writeComma();
-                                    }
-                                }
+                                Object obj = readMethod.invoke(src);
+                                if (obj == null) jsonWriter.writeDefaultValue(property, comma);
+                                else if (!serialized.contains(obj)) {
+                                    jsonWriter.writeName(propertyName);
+                                    saveObjectAsJSON(obj);
+                                    if (comma) jsonWriter.writeComma();
+                                } else jsonWriter.writeDefaultValue(property, comma);
                             }
-                        } else if (readMethod != null)
+                        } else
                             jsonWriter.writePair(propertyName, readMethod.invoke(src), comma);
                     } catch (Exception e) {
                         jsonWriter.writeDefaultValue(property, comma);
