@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JSON Beans.iml" filepath="$PROJECT_DIR$/JSON Beans.iml" />
       <module fileurl="file://$PROJECT_DIR$/beans/beans.iml" filepath="$PROJECT_DIR$/beans/beans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demonstrationBeans/demonstrationBeans.iml" filepath="$PROJECT_DIR$/demonstrationBeans/demonstrationBeans.iml" />
     </modules>
   </component>
 </project>

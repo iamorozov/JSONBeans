@@ -21,4 +21,5 @@ public class JSONEncoderTest {
     public void arraysEncodingTest(){
         System.out.println(new TestStringBuilder().ArraysBeanJSONString());
     }
+
 }

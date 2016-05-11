@@ -2,10 +2,10 @@
   <artifact type="jar" build-on-make="true" name="JSON Beans:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/JSON_Beans_jar</output-path>
     <root id="archive" name="JSON Beans.jar">
-      <element id="module-output" name="beans" />
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/beans/META-INF/MANIFEST.MF" />
       </element>
+      <element id="module-output" name="JSON Beans" />
     </root>
   </artifact>
 </component>

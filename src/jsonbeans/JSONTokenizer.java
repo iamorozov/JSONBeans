@@ -129,6 +129,7 @@ public class JSONTokenizer {
 
         if(!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(LEFT_BRACE))))
             JSONError("Missing \'{\'", tokenizer.lineno());
+        //TODO: Manage properly recognizing of null values
 
         getNextToken();
 

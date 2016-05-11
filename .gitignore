@@ -4,3 +4,4 @@ tests
 /.idea
 /out
 .gitignore
+/demonstrationBeans
