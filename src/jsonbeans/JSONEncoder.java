@@ -14,14 +14,10 @@ import java.util.Set;
 /**
  * Created by Morozov Ivan on 07.03.2016.
  *
- * Class to make JSON from JavaBean class
+ * Class to make JSON representation of JavaBean
  */
 public class JSONEncoder {
 
-    //TODO: Serialize references
-    //TODO: Manage exceptions
-    //TODO: Refactoring
-    //TODO: don't Serialize null values
     private JSONWriter jsonWriter;
 
     private Set<Object> serialized = new HashSet<>();
@@ -120,7 +116,7 @@ public class JSONEncoder {
                         if (i != objectArray.length - 1) jsonWriter.write(',');
                     }
                 } catch (Exception e) {
-                    //TODO:really?
+                    //Ignore all exceptions
                 }
             }
         }
@@ -128,6 +124,13 @@ public class JSONEncoder {
         jsonWriter.writeCloseBracket();
     }
 
+
+    /**
+     * Serializes a bean to String JSON representation.
+     *
+     * @param src - JavaBean to serialize
+     * @throws JSONSerializationException
+     */
     public void saveJSON(Object src)
             throws JSONSerializationException{
         jsonWriter = JSONWriter.getJSONWriter();
@@ -136,6 +139,10 @@ public class JSONEncoder {
         saveObjectAsJSON(src);
     }
 
+
+    /**
+     * @return - JSON representation of bean as String
+     */
     public String JSONasString(){
         return jsonWriter.toString();
     }
