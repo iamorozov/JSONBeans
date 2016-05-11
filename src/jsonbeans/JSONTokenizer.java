@@ -125,11 +125,12 @@ public class JSONTokenizer {
     }
 
 
-    Object readObject()throws JSONDeserializationException{
+    Object readObject() throws JSONDeserializationException {
+
+        if ("null".equals(currentToken)) return null;
 
         if(!(tokenType == TYPE_SYMBOL && currentToken.equals(String.valueOf(LEFT_BRACE))))
             JSONError("Missing \'{\'", tokenizer.lineno());
-        //TODO: Manage properly recognizing of null values
 
         getNextToken();
 
