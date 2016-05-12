@@ -1,8 +1,6 @@
 package jsonbeans;
 
 /**
- * Created by Morozov Ivan on 19.03.2016.
- *
  * Class to read Beans from JSON
  */
 public class JSONDecoder{
@@ -11,7 +9,8 @@ public class JSONDecoder{
 
     /**
      * @param jsonString - A string with JSON representation of object
-     * @throws JSONDeserializationException
+     * @throws JSONDeserializationException - Deserialization problem
+     * encapsulated in exception
      */
     public JSONDecoder(String jsonString) throws JSONDeserializationException {
         tokenizer = new JSONTokenizer(jsonString);
@@ -19,7 +18,8 @@ public class JSONDecoder{
 
     /**
      * @return deserialized object
-     * @throws JSONDeserializationException
+     * @throws JSONDeserializationException  - Deserialization problem
+     * encapsulated in exception
      */
     public Object readJSON() throws JSONDeserializationException {
         return tokenizer.readObject();

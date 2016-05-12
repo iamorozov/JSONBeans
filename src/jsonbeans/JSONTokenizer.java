@@ -15,12 +15,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Morozov Ivan on 07.04.2016.
- *
  * Class used for lexical division of json object
  */
 
-public class JSONTokenizer {
+class JSONTokenizer {
 
     // Token types
     private static final int TYPE_INT_CONST = 1;

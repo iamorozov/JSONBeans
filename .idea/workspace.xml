@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Module 'JSON Beans'" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb31fcb8-f068-4de8-8f27-de667f76e970" name="Default" comment="Some">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/beans/watch/Minute_hand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/beans/watch/VCWatch$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/beans/watch/VCWatch.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/beans/watch/VCWatchBeanInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/beans/watch/hour_hand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/beans/watch/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/beans/watch/second_hand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/beans/watch/watch.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jsonbeans/BeanInstantiator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONBeansManager.java" afterPath="" />
+    <list default="true" id="bb31fcb8-f068-4de8-8f27-de667f76e970" name="Default" comment="FIX">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/beans/src/beans/NullBean.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_7_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JSON_Beans_jar/JSON Beans.jar" afterPath="$PROJECT_DIR$/out/artifacts/JSON_Beans_jar/JSON Beans.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/beans/beans/Dolphin.class" afterPath="$PROJECT_DIR$/out/production/beans/beans/Dolphin.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/JSON_Beans_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/JSON_Beans_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beans/src/beans/Dolphin.java" afterPath="$PROJECT_DIR$/beans/src/beans/Dolphin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JSON Beans.iml" afterPath="$PROJECT_DIR$/JSON Beans.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONDecoder.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONDecoder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONSerializationException.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONSerializationException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java" afterPath="$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONUtil.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jsonbeans/JSONWriter.java" afterPath="$PROJECT_DIR$/src/jsonbeans/JSONWriter.java" />
     </list>
     <ignored path="JSON Beans.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,6 +43,9 @@
     <SUITE FILE_PATH="coverage/JSON Beans$JSONEncoderTest.coverage" NAME="JSONEncoderTest Coverage Results" MODIFIED="1461968048504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>jsonbeans.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/JSON Beans$jsonbeans_in_JSON_Beans.coverage" NAME="jsonbeans in JSON Beans Coverage Results" MODIFIED="1462984921251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>jsonbeans.*</FILTER>
+    </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -51,44 +56,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JSONDecoderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONDecoderTest.java">
+      <file leaf-file-name="JSONDecoder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONDecoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JSONTokenizer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JSONTokenizer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dolphin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beans/src/beans/Dolphin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONTokenizerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONTokenizerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONWriter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONEncoder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONSerializationException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONSerializationException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONDeserializationException.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONDeserializationException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONListener.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONLexer.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/recognizer/JSONBaseListener.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONBeanVisitor.java" />
@@ -133,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONDeserializationException.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/TestSber.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/StreamTokenizerTest.java" />
-        <option value="$PROJECT_DIR$/src/jsonbeans/JSONUtil.java" />
         <option value="$PROJECT_DIR$/beans/src/beans/AnotherTestBean.java" />
         <option value="$PROJECT_DIR$/beans/src/beans/TestBean.java" />
         <option value="$PROJECT_DIR$/beans/src/beans/PrimitivesBean.java" />
@@ -141,18 +172,12 @@
         <option value="$PROJECT_DIR$/tests/jsonbeans/DolphinsGraph.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/XMLEncoderTest.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/TestClassFactory.java" />
-        <option value="$PROJECT_DIR$/tests/jsonbeans/TestStringBuilder.java" />
         <option value="$PROJECT_DIR$/beans/src/beans/ArraysBean.java" />
-        <option value="$PROJECT_DIR$/tests/jsonbeans/JSONTokenizerTest.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/JSONDecoderTest.java" />
-        <option value="$PROJECT_DIR$/src/jsonbeans/JSONDecoder.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/BeanInstantiator.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONBeansManager.java" />
         <option value="$PROJECT_DIR$/beans/src/beans/blah.form" />
-        <option value="$PROJECT_DIR$/src/jsonbeans/JSONSerializationException.java" />
-        <option value="$PROJECT_DIR$/src/jsonbeans/JSONWriter.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/JSONWriterTest.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/demonstrationBeans/src/dolphinariumBeans/Dolphinarium.java" />
         <option value="$PROJECT_DIR$/demonstrationBeans/src/dolphinariumBeans/PoolWIthDolphins.java" />
         <option value="$PROJECT_DIR$/demonstrationBeans/src/dolphinariumBeans/Dolphin.java" />
@@ -171,10 +196,18 @@
         <option value="$PROJECT_DIR$/demonstrationBeans/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java" />
         <option value="$PROJECT_DIR$/demonstrationBeans/src/beans/DolphinsPropertyEditor.java" />
-        <option value="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" />
         <option value="$PROJECT_DIR$/beans/src/beans/Dolphin.java" />
         <option value="$PROJECT_DIR$/tests/jsonbeans/TestBeanFactory.java" />
+        <option value="$PROJECT_DIR$/beans/src/beans/NullBean.java" />
+        <option value="$PROJECT_DIR$/tests/jsonbeans/TestStringBuilder.java" />
+        <option value="$PROJECT_DIR$/tests/jsonbeans/JSONTokenizerTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java" />
+        <option value="$PROJECT_DIR$/src/jsonbeans/JSONDecoder.java" />
         <option value="$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java" />
+        <option value="$PROJECT_DIR$/src/jsonbeans/JSONWriter.java" />
+        <option value="$PROJECT_DIR$/src/jsonbeans/JSONUtil.java" />
+        <option value="$PROJECT_DIR$/src/jsonbeans/JSONSerializationException.java" />
       </list>
     </option>
   </component>
@@ -194,10 +227,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1746" />
-    <option name="y" value="-311" />
-    <option name="width" value="1378" />
-    <option name="height" value="1047" />
+    <option name="x" value="170" />
+    <option name="width" value="1026" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -224,8 +256,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -254,24 +286,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsonbeans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JSON Beans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JSON Beans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -290,7 +304,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="beans" />
+              <option name="myItemId" value="out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,11 +318,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="beans" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="JSON Beans" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JSON Beans" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -318,16 +338,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/курсовая Кан/1CourseWork/Java3DvsJavaFX" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.3264368" />
     <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="ignore_missing_gitignore" value="true" />
@@ -354,7 +374,7 @@
       <recent name="D:\Dropbox\Курсач 2 курс\JSON Beans\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JSONTokenizerTest">
+  <component name="RunManager" selected="JUnit.jsonbeans in JSON Beans">
     <configuration default="false" name="JSONTokenizerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -407,58 +427,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="JSONWriterTest.writeDefaultValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="jsonbeans.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JSON Beans" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jsonbeans" />
-      <option name="MAIN_CLASS_NAME" value="jsonbeans.JSONWriterTest" />
-      <option name="METHOD_NAME" value="writeDefaultValue" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="JSONEncoderTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="jsonbeans.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JSON Beans" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jsonbeans" />
-      <option name="MAIN_CLASS_NAME" value="jsonbeans.JSONEncoderTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="JSONDecoderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -473,6 +441,58 @@
       <option name="MAIN_CLASS_NAME" value="jsonbeans.JSONDecoderTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="jsonbeans in JSON Beans" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jsonbeans.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JSON Beans" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jsonbeans" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="JSONTokenizerTest.testNullValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jsonbeans.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JSON Beans" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jsonbeans" />
+      <option name="MAIN_CLASS_NAME" value="jsonbeans.JSONTokenizerTest" />
+      <option name="METHOD_NAME" value="testNullValues" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -910,17 +930,17 @@
       <item index="0" class="java.lang.String" itemvalue="Application.JSONEncoder" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.JSONTokenizerTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.JSONDecoderTest.readJSON" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JSONWriterTest.writeDefaultValue" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JSONEncoderTest.test" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.JSONDecoderTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.JSONDecoderTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.jsonbeans in JSON Beans" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.JSONTokenizerTest.testNullValues" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JSONTokenizerTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.JSONDecoderTest.readJSON" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.jsonbeans in JSON Beans" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.JSONTokenizerTest.testNullValues" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.JSONDecoderTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.JSONEncoderTest.test" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.JSONWriterTest.writeDefaultValue" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.JSONTokenizerTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.JSONDecoderTest.readJSON" />
       </list>
     </recent_temporary>
   </component>
@@ -1018,21 +1038,11 @@
       <workItem from="1462785994332" duration="5311000" />
       <workItem from="1462816615561" duration="49000" />
       <workItem from="1462870456853" duration="187000" />
-      <workItem from="1462966444752" duration="1863000" />
-    </task>
-    <task id="LOCAL-00011" summary="Unit test improve">
-      <created>1460124687523</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1460124687523</updated>
-    </task>
-    <task id="LOCAL-00012" summary="ANTLR grammar created and interpreter generated">
-      <created>1460125361625</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1460125361625</updated>
+      <workItem from="1462966444752" duration="2051000" />
+      <workItem from="1462968687115" duration="1237000" />
+      <workItem from="1462982438284" duration="598000" />
+      <workItem from="1462983618561" duration="1984000" />
+      <workItem from="1462992470887" duration="3070000" />
     </task>
     <task id="LOCAL-00013" summary="fixes">
       <created>1460125598353</created>
@@ -1363,43 +1373,57 @@
       <option name="project" value="LOCAL" />
       <updated>1462967649410</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="FIX">
+      <created>1462968391512</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1462968391512</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Added null values recognizing to tokenizer">
+      <created>1462985104853</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1462985104854</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JSONDecoderTest - 2016.05.11 at 14h 59m 04s.xml">
-      <configuration name="JSONDecoderTest" configurationId="JUnit" />
+    <history-entry file="JSONTokenizerTest_testNullValues - 2016.05.11 at 19h 38m 03s.xml">
+      <configuration name="JSONTokenizerTest.testNullValues" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JSONDecoderTest - 2016.05.11 at 14h 59m 33s.xml">
-      <configuration name="JSONDecoderTest" configurationId="JUnit" />
+    <history-entry file="JSONTokenizerTest_testNullValues - 2016.05.11 at 19h 39m 55s.xml">
+      <configuration name="JSONTokenizerTest.testNullValues" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JSONDecoderTest_readJSON - 2016.05.11 at 14h 56m 58s.xml">
-      <configuration name="JSONDecoderTest.readJSON" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JSONDecoderTest_readJSON - 2016.05.11 at 14h 58m 51s.xml">
-      <configuration name="JSONDecoderTest.readJSON" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JSONDecoderTest_readJSON - 2016.05.11 at 15h 03m 09s.xml">
-      <configuration name="JSONDecoderTest.readJSON" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JSONEncoderTest_test - 2016.05.09 at 14h 21m 54s.xml">
-      <configuration name="JSONEncoderTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JSONTokenizerTest - 2016.05.11 at 14h 59m 19s.xml">
-      <configuration name="JSONTokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JSONTokenizerTest - 2016.05.11 at 15h 03m 22s.xml">
-      <configuration name="JSONTokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JSONWriterTest_writeDefaultValue - 2016.05.05 at 20h 51m 29s.xml">
-      <configuration name="JSONWriterTest.writeDefaultValue" configurationId="JUnit" />
+    <history-entry file="JSONTokenizerTest_testNullValues - 2016.05.11 at 19h 41m 09s.xml">
+      <configuration name="JSONTokenizerTest.testNullValues" configurationId="JUnit" />
     </history-entry>
     <history-entry file="JSONWriterTest_writeDefaultValue - 2016.05.05 at 21h 59m 05s.xml">
       <configuration name="JSONWriterTest.writeDefaultValue" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="jsonbeans_in_JSON_Beans - 2016.05.11 at 15h 08m 15s.xml">
+      <configuration name="jsonbeans in JSON Beans" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="jsonbeans_in_JSON_Beans - 2016.05.11 at 15h 20m 58s.xml">
+      <configuration name="jsonbeans in JSON Beans" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="jsonbeans_in_JSON_Beans - 2016.05.11 at 15h 27m 19s.xml">
+      <configuration name="jsonbeans in JSON Beans" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="jsonbeans_in_JSON_Beans - 2016.05.11 at 19h 35m 34s.xml">
+      <configuration name="jsonbeans in JSON Beans" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="jsonbeans_in_JSON_Beans - 2016.05.11 at 19h 41m 42s.xml">
+      <configuration name="jsonbeans in JSON Beans" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="jsonbeans_in_JSON_Beans - 2016.05.11 at 19h 42m 04s.xml">
+      <configuration name="jsonbeans in JSON Beans" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309080000" />
+    <option name="totallyTimeSpent" value="316157000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1411,38 +1435,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1746" y="-311" width="1378" height="1047" extended-state="0" />
+    <frame x="170" y="0" width="1026" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2251951" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4184839" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718894" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946002" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34994808" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20430107" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65299684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2393539" sideWeight="0.4954955" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3009901" sideWeight="0.4954955" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6739356" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4253807" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9094017" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24127465" sideWeight="0.5045045" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43094495" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3824885" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4184839" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6632492" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4253807" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6623762" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1491,8 +1515,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="fixes" />
-    <MESSAGE value="Some repairs on JSONEncoder&#10;proper serializing of primitive Arrays" />
     <MESSAGE value="JSONTokenizer completed&#10;Some test classes fixes" />
     <MESSAGE value="JSONWriter fixes via chars encoding" />
     <MESSAGE value="JSONWriter final version" />
@@ -1516,7 +1538,9 @@
     <MESSAGE value="Encoder fixes" />
     <MESSAGE value="Writer fixes" />
     <MESSAGE value="Some code style improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some code style improvements" />
+    <MESSAGE value="FIX" />
+    <MESSAGE value="Added null values recognizing to tokenizer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added null values recognizing to tokenizer" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1531,7 +1555,7 @@
           <option name="timeStamp" value="115" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="116" />
+      <option name="time" value="117" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1553,13 +1577,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../libs/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -1616,25 +1633,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/TestStringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONBeansManager.java" />
     <entry file="file://$PROJECT_DIR$/src/jsonbeans/BeanInstantiator.java" />
     <entry file="file://$PROJECT_DIR$/beans/src/beans/blah.form" />
     <entry file="file://$PROJECT_DIR$/beans/src/beans/blah.java" />
     <entry file="file://$PROJECT_DIR$/out/production/JSON Beans/jsonbeans/JSONBeanVisitor.class" />
-    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONWriterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="66" column="85" selection-start-line="64" selection-start-column="8" selection-end-line="66" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/awt/Font.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="617">
@@ -1663,30 +1666,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2502">
-          <caret line="176" column="58" selection-start-line="176" selection-start-column="58" selection-end-line="176" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/dolphinariumBeans/Dolphinarium.java" />
     <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/dolphinariumBeans/PoolWIthDolphins.java" />
-    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/dolphinariumBeans/Dolphin.java" />
     <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/phonebook/PhoneBook.java" />
     <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/phonebook/Person.java" />
@@ -1698,53 +1679,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/Pool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/Dolphinarium.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/StripedDolphin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/DottedDolphin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/Dolphin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demonstrationBeans/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/Pool.java" />
+    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/Dolphinarium.java" />
+    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/StripedDolphin.java" />
+    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/DottedDolphin.java" />
+    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/Dolphin.java" />
+    <entry file="file://$PROJECT_DIR$/demonstrationBeans/META-INF/MANIFEST.MF" />
     <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONEncoderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1752,92 +1692,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/PoolBeanInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/DolphinariumBeanInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/DolphinsPropertyEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="51" column="2" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/PoolPropertyEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONDeserializationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONSerializationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="118" column="43" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/PoolBeanInfo.java" />
+    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/DolphinariumBeanInfo.java" />
+    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/DolphinsPropertyEditor.java" />
+    <entry file="file://$PROJECT_DIR$/demonstrationBeans/src/beans/PoolPropertyEditor.java" />
     <entry file="jar://$PROJECT_DIR$/../libs/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONWriterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/beans/src/beans/Dolphin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="289">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beans/src/beans/NullBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/jsonbeans/TestBeanFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
+        <state relative-caret-position="589">
+          <caret line="103" column="35" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/jsonbeans/TestStringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+          <folding>
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1852,18 +1760,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/jsonbeans/JSONTokenizerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="368">
+          <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONTokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONSerializationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonbeans/JSONDeserializationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1874,7 +1830,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>demonstrationBeans:jar</last-edited>
+          <last-edited>JSON Beans:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1947,11 +1903,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.antlr:antlr4:4.5.2-1</last-edited>
+          <last-edited>junit:junit:4.12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.3264368" />
               </list>
             </option>
           </splitter-proportions>

@@ -7,8 +7,6 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.joining;
 
 /**
- * Created by Morozov Ivan on 20.03.2016.
- *
  * Class for writing JSON to string
  */
 class JSONWriter {
@@ -24,7 +22,7 @@ class JSONWriter {
 
     JSONWriter(){}
 
-    public static JSONWriter getJSONWriter(){
+    static JSONWriter getJSONWriter() {
         return new JSONWriter();
     }
 
@@ -37,7 +35,7 @@ class JSONWriter {
             return (value instanceof String || value instanceof Character) ? "\"" + value.toString() + "\"" : value.toString();
     }
 
-    public void write(String toAppend){
+    void write(String toAppend) {
         for (int i = 0; i < nestingLevel; i++) {
             writer.append("    ");
         }
@@ -46,34 +44,34 @@ class JSONWriter {
         writer.append("\n");
     }
 
-    public void write(Character toAppend){
+    void write(Character toAppend) {
         write(toAppend.toString());
     }
 
 
-    public void writeName(String name){
+    void writeName(String name) {
         write("\"" + name + "\"" + ":");
     }
 
 
-    public void writeValue(Object value){
+    void writeValue(Object value) {
         write(getStringValue(value));
     }
 
 
-    public void writePair(String name, Object value, boolean comma){
+    void writePair(String name, Object value, boolean comma) {
         if (comma)
             write("\"" + name + "\"" + ":" + getStringValue(value) + ",");
         else
             write("\"" + name + "\"" + ":" + getStringValue(value));
     }
 
-    public void writeClass(Class beanClass, boolean comma){
+    void writeClass(Class beanClass, boolean comma) {
         writePair("class", beanClass.getCanonicalName(), comma);
     }
 
 
-    public void writeComma(){
+    void writeComma() {
         write(",");
     }
 
@@ -177,25 +175,25 @@ class JSONWriter {
         } else writePair(property.getName(), null, comma);
     }
 
-    public void writeOpenBrace(){
+    void writeOpenBrace() {
         write(LEFT_BRACE);
         nestingLevel++;
     }
 
 
-    public void writeCloseBrace(){
+    void writeCloseBrace() {
         nestingLevel--;
         write(RIGHT_BRACE);
     }
 
 
-    public void writeOpenBracket(){
+    void writeOpenBracket() {
         write(LEFT_BRACKET);
         nestingLevel++;
     }
 
 
-    public void writeCloseBracket(){
+    void writeCloseBracket() {
         nestingLevel--;
         write(RIGHT_BRACKET);
     }

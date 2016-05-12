@@ -12,8 +12,6 @@ import java.util.LinkedList;
 import java.util.Set;
 
 /**
- * Created by Morozov Ivan on 07.03.2016.
- *
  * Class to make JSON representation of JavaBean
  */
 public class JSONEncoder {
@@ -129,7 +127,8 @@ public class JSONEncoder {
      * Serializes a bean to String JSON representation.
      *
      * @param src - JavaBean to serialize
-     * @throws JSONSerializationException
+     * @throws JSONSerializationException - Serialization problem
+     * encapsulated in exception
      */
     public void saveJSON(Object src)
             throws JSONSerializationException{

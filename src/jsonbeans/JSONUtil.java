@@ -5,8 +5,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by Morozov Ivan on 10.04.2016.
- *
  * Contains some utility information
  */
 class JSONUtil {
