@@ -5,6 +5,10 @@ package jsonbeans;
  */
 public class JSONDeserializationException extends Exception {
 
+    public JSONDeserializationException() {
+        super("Some JSON deserialization problem");
+    }
+
     public JSONDeserializationException(String message) {
         super(message);
     }
