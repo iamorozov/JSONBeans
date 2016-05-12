@@ -6,6 +6,7 @@ package jsonbeans;
 public class JSONSerializationException extends Exception {
 
     public JSONSerializationException() {
+        super("Some JSON serialization problem");
     }
 
     public JSONSerializationException(String message) {
