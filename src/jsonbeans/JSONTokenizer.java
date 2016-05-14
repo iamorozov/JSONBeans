@@ -186,7 +186,7 @@ class JSONTokenizer {
             return instance;
         }
         catch (ClassNotFoundException e){
-            JSONError("Class have not found", tokenizer.lineno());
+//            JSONError("Class have not found", tokenizer.lineno());
             return null;
         }
         catch (ReflectiveOperationException e){
