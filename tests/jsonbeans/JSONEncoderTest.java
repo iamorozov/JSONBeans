@@ -1,5 +1,7 @@
 package jsonbeans;
 
+import beans.BeansContainer;
+import beans.Jar;
 import org.junit.Test;
 
 public class JSONEncoderTest {
@@ -22,4 +24,14 @@ public class JSONEncoderTest {
         System.out.println(new TestStringBuilder().ArraysBeanJSONString());
     }
 
+    @Test
+    public void jcomponentTest() throws JSONSerializationException {
+
+        BeansContainer container = new BeansContainer();
+        Jar jar = new Jar();
+        container.setFirstJar(jar);
+
+        jsonEncoder.saveJSON(container);
+        System.out.println(jsonEncoder.JSONasString());
+    }
 }
